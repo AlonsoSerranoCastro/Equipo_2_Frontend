@@ -1,0 +1,38 @@
+body{
+    background-color: #A0A0A0;
+}
+
+.cardBody{
+    text-align: center;
+    background-color: #FCC875;
+}
+.cardBody > h1{
+    font-size: large;
+}
+
+.cardBody > h2{
+    font-size: medium;
+}
+
+.btnMore{
+    background-color: #272932;
+    color: #FFFFFF;
+}
+
+.btnMore:hover{
+    background-color: #70727a;
+    color: black;
+}
+
+.aboutUs{
+    background-color: #272932;
+}
+.aboutUs > p {
+    font-size: medium;
+    color: white;
+}
+
+.aboutUs > h1{
+    font-size: x-large;
+    color: #135B11;
+}
