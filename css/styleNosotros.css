@@ -1,5 +1,5 @@
 body{
-    background-color: #A0A0A0;
+    background-color: #ffffff;
 }
 
 .cardBody{
@@ -26,17 +26,23 @@ body{
 
 .aboutUs{
     background-color: #272932;
+    border-radius: 15px;
+}
+
+img{
+    background-color: #272932;   
 }
 
 #titulo {
-    
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 48px;
+    text-align: center;   
+    color: #135B11;
 }
 .aboutUs > p {
     font-size: medium;
     color: white;
-}
-
-.aboutUs > h1{
-    font-size: x-large;
-    color: #135B11;
 }
