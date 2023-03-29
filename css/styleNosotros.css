@@ -27,6 +27,10 @@ body{
 .aboutUs{
     background-color: #272932;
 }
+
+#titulo {
+    
+}
 .aboutUs > p {
     font-size: medium;
     color: white;
