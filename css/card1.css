@@ -5,11 +5,15 @@
             box-sizing: border-box;
   }
   body{
-    background-color: #272932;
+    background-color: #fff;
   }
   span{
     position: relative;
     bottom: 30px;
+    background-color: #272932;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 2.5px rgb(0, 0, 0);
   }
   h1{
 font-family: 'Fredoka';
@@ -17,9 +21,10 @@ font-style: normal;
 font-weight: 700;
 font-size: 64px;
 line-height: 77px;
-color: #fff;
+color: #272932;
     text-align: center;
     margin: 2rem 0;
+  
   }
   
   h3{
@@ -29,8 +34,21 @@ color: #fff;
     padding: 15px;
     font-family: 'lato';
     box-shadow: 0 4px 8px 0 rgba(237, 231, 231, 0.25);
+    color: #272932;
+    box-shadow: 0 2px 4px 2.5px rgb(0, 0, 0);
+  }
+  h4{
+    background-color: #FCC875;
+    text-align: justify;
+    border-radius: 15px;
+    padding: 15px;
+    font-family: 'lato';
+    box-shadow: 0 4px 8px 0 rgba(237, 231, 231, 0.25);
     border: 1px solid #FFFFFF;
     color: #272932;
+    box-shadow: 0 2px 4px 2.5px rgb(0, 0, 0);
+    position: relative;
+    top: 30px;
   }
   p.nombres{
 color: #ffffff;
@@ -149,7 +167,7 @@ a{
       position: absolute;
       left: 0;
       width: 100%;
-      padding: 2rem;
+      padding: 1rem;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       outline: 1px solid transparent;
@@ -185,6 +203,7 @@ a{
               transform: rotateY(0deg);
       -webkit-transform-style: preserve-3d;
               transform-style: preserve-3d;
+              background-color: #272932;
   }
   
   .container:hover .back{
