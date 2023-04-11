@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/Contacto.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Handlee&family=Lato:wght@300&display=swap"
+    rel="stylesheet">
+
+  <title>Contacto</title>
+</head>
+
+<body>
+  <br><br>
+  <div id="Error"></div>
+  <h1 class="tituloContacto">Contacto</h1>
+
+  <h2 class="textoNodudes">No dudes en ponerte en contacto con nosotros si tienes dudas o sugerencias. </h2>
+  <div class="login-box">
+    <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+      <p id="alertValidacionesTexto"></p>
+    </div>
+
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="" id="nombre">
+        <label>Nombre</label>
+      </div>
+      <div class="user-box">
+        <input type="email" name="" required="" id="email">
+        <label>E-mail</label>
+        <div class="user-box">
+          <input type="text" name="comments" required="" id="telefono">
+          <label>Teléfono</label>
+          <div class="user-box">
+            <input type="text" name="comments" required="" id="mensaje">
+            <label>Mensaje</label>
+            
+          </div>
+          
+                  </div>
+                  <select class="user-box" name="select" id="sucursales">
+                    <option value="value0" selected>-Seleccionar Sucursal-</option>
+                    <option value="GDL">Sucursal Malotes (GDL)</option>
+                    <option value="MTY" >Sucursal Sangrienta (MTY)</option>
+                    <option value="CDMX">Sucursal Adam Sanddler (CDMX)</option>
+                  </select>
+                  <br><br>
+                  
+                </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="publicidad">
+        <label class="form-check-label" for="">Acepto recibir información sobre las novedades y promociones de Burguer
+          House
+        </label>
+      </div>
+
+
+      <a href="#" id="btnContacto">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Enviar
+      </a>
+    </form>
+  </div>
+  <script src="./js/contacto.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+
+</body>
+
+</html>
