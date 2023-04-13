@@ -44,6 +44,13 @@ let cont = 0;
         console.log(msgError);
         cont+= 1;
     }
+    if (validarEmail(txtEmail.value)) {
+
+    } else {
+        console.log(msgError);
+        cont+= 1;
+    }
+
     if (validarTelefono(txtTelefono.value)) {
 
     } else {
@@ -65,12 +72,21 @@ let cont = 0;
         cont+= 1;
     }
     if (cont > 0){
-        let msgAlerta = document.getElementById("Error"); 
-        let htmlAlert = `<ul class= "bg-danger text-white"> Tienes Errores En los Siguientes Campos ${msgError}</ul>`;
-        msgAlerta.insertAdjacentHTML("afterBegin", htmlAlert);
+        let htmlAlert = `<ul class = listaDeErrores> Tienes errores en los siguientes campos: ${msgError}</ul>`;
+        Swal.fire({ 
+        icon: 'error',
+        title: 'Oraa...',
+        html: htmlAlert,
+      }); 
+      cont=0;
+      htmlAlert = "";
+      msgError="";
+
+       
     } else{
-       let sugerencias = "Nombre: " + txtNombre.value  + "<br/> E-mail: " + txtEmail.value + "<br/> Teléfono: " + txtTelefono.value + "<br/> Sucursales: " + txtSucursales.value +"<br/> Mensaje: "+ txtMensaje.value; 
-    Email.send({
+       let sugerencias = "Nombre: " + txtNombre.value  + "\nE-mail: " + txtEmail.value + "\nTeléfono: " + txtTelefono.value + "\nSucursales: " + txtSucursales.value +"\nMensaje: "+ txtMensaje.value; 
+    
+       Email.send({
 
         SecureToken : "598073ae-0fff-4b3a-bc8d-3de1756015b4",
         To : 'burgershouse2023@gmail.com',
@@ -78,7 +94,7 @@ let cont = 0;
         Subject : "Buzón de Quejas y Sugerencias BurgersHouse",
         Body : sugerencias,
     }).then(
-      message => alert("Mensaje Enviado")
+      message => Swal.fire ("Sugerencia enviada")
     )}
 
 });
@@ -87,7 +103,7 @@ function validarNombre(nombre) {
         return true;
 
     } else {
-        msgError += "<li> Nombre No Válido </li> ";
+        msgError += "<li> Nombre No Válido</li>";
         return false;
     }
 }
@@ -98,7 +114,7 @@ function validarEmail(email) {
 
 
     } else {
-        msgError += "<li> Email No Válido </li> ";
+        msgError += "<li>Email No Válido</li>";
         return false;
     }
 }
@@ -108,7 +124,7 @@ function validarTelefono(telefono) {
 
 
     } else {
-        msgError += "<li> Teléfono No Válido </li> ";
+        msgError += '<li> Teléfono No Válido </li>';
         return false;
     }
 }
@@ -118,7 +134,7 @@ function validarMensaje(mensaje) {
 
 
     } else {
-        msgError += "<li> Mensaje No Válido </li> ";
+        msgError += " <li> Mensaje No Válido </li>";
         return false;
     }
 }
@@ -128,7 +144,7 @@ function validarSucursal(sucursal) {
 
 
     } else {
-        msgError += "<li> Selecciona Una Sucursal Válida </li> ";
+        msgError += "<li> Selecciona Una Sucursal Válida </li>";
         return false;
     }
 }

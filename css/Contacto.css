@@ -1,22 +1,11 @@
-html {
-  height: 100%;
-
-}
-
-
 body { /*Estilo del cuerpo */
-  margin: 0;
-  padding: 0;
   background: #fff;
 }
 
+
 .login-box { /*Caja del formato  */
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  width: 75%;
+  width: 100%;
   padding: 40px;
-  transform: translate(-50%, -50%);
   background: #272932;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
@@ -34,8 +23,6 @@ font-size: 64px;
 line-height: 77px;
 text-align: center;
 -webkit-text-stroke: 1.5px #272932;
-  
-  
 }
 
 .textoNodudes { /*Estilo del texto "H2 "*/
@@ -61,8 +48,6 @@ font-size: 16px;
 font-weight: 400;
 line-height: 43px;
 letter-spacing: 0em;
-
-
 }
 
 .login-box .user-box {
@@ -95,9 +80,9 @@ letter-spacing: 0em;
   pointer-events: none;
   transition: .5s;
   
-font-family: 'Handlee';
-letter-spacing: 0em;
-text-align: center;
+  font-family: 'Handlee';
+  letter-spacing: 0em;
+  text-align: center;
 
 }
 
@@ -112,7 +97,7 @@ letter-spacing: 0em;
 text-align: center;
 }
 
-.login-box form a { /*Estilo del boton  */
+.login-box  a { /*Estilo del boton  */
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -122,14 +107,14 @@ text-align: center;
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
+  margin-top: 10px;
   letter-spacing: 4px;
   font-family: 'Handlee';
-letter-spacing: 0em;
-text-align: center;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
-.login-box a:hover { /*Estilo del hover del boton */
+.login-box a:hover { /*Estilo del hover del botón */
   background: #FCC875;
   color: #fff;
   border-radius: 10px;
@@ -141,7 +126,7 @@ text-align: center;
   position: absolute;
   display: block;
 }
-/*A partir de aqui se anima el boton con la linea*/
+/*A partir de aquí se anima el botón con la línea*/
 .login-box a span:nth-child(1) {
   top: 0;
   left: -100%;
@@ -149,6 +134,32 @@ text-align: center;
   height: 2px;
   background: linear-gradient(90deg, transparent, #FCC875);
   animation: btn-anim1 1s linear infinite;
+}
+
+.listaDeErrores {
+  list-style-type: none;
+}
+
+.swal2-styled.swal2-confirm {
+  border-radius: .25em;
+  background: initial;
+  background-color: #FCC875 !important;
+  color: #fff;
+  font-size: 1em;
+}
+
+#swal2-title {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: .8em 1em 0;
+  color: inherit;
+  font-size: 1.875em;
+  font-family: 'Handlee' !important;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+  word-wrap: break-word;
 }
 
 @keyframes btn-anim1 {
