@@ -1,38 +1,142 @@
-nav{ background-color: #272932;
-height: 120px   ;
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+
+.navbar{ background-color: #272932;
+height: 100px   ;
 position: fixed;
 width: 100%;
 top: 0;
 left: 0;
-justify-content:  space-between;
+}
 
+.navbar-nav{
+    display: flex;
+    margin-left: 95px;
+}
 
-
+.nav-item{
+    font-size: 20px;
+    margin: 0 10px;
+  line-height: 80px;
+  width: max-content;
 }
 
 .nav-link{
-    color: #E7ECEF;
-    margin: 0 0 30px;
-    padding: 0;
+    color: #E7ECEF ;
+    padding: 8px 12px;
     font-family: 'Fredoka';
     font-style: bold;
     font-weight: 700;
-    font-size: 20px;
     line-height: 24px;
-    text-align: center
+    margin: 0px 25px;
   }
 
+  .nav-link:hover,
+  .nav-link_active{
+    background-color:#FCC875 ;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+
+
 .logoNav{
-    width: 120px;
-    height: 100%;
+    width: 150px;
+    height: 160px;
+    margin-left: 40px ;
 }
 
-.collapse{
-    background-color: #272932;
-    border:none;
+.navbar-toggler{
+    color: white;
+    border: none;
+    background-color: #E7ECEF;
     font-size: 30px;
-    border-radius: 15px;
-    position:relative;
-    padding: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.bi-cart3{
+    color: #E7ECEF;
+    width: 40px;
+    height: 40px;
+    margin: 0 120px 80px;
 
 }
+
+/*Sección responsiva del encabezado para dispositivo móvil*/
+@media(max-width:768px){
+
+    body{
+        padding-top: 135px;
+    }
+
+    .logoNav{
+        width: 120px;
+        height: 100%;
+        margin-right: 30px;
+    }
+
+    .navbar-toggler{
+        display: block;
+    }
+
+    .navbar-toggler:focus:not(:focus-visible){
+        outline:none;
+    }
+
+    .bi{
+        color: #272932 ;
+    }
+
+    .navbar{ background-color: #272932;
+        height: 60px   ;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        }
+        
+    .navbar-nav{
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background-color: #272932;
+            position: fixed;
+            top: 60px;
+            width:100%;
+            padding: 20px 0;
+
+            height: calc(100% - 60px);
+            overflow-y: auto;
+
+            left: 100%;
+            transition: left 0.3s;
+
+        }
+        
+    .nav-item{
+            line-height: 70px;
+        }
+        
+          .nav-link:hover,
+          .nav-link_active{
+           background: none;
+           color: #FCC875;
+          }
+        
+        
+        .navbar-nav_visible{
+            left:0;
+        }
+
+    .bi-cart3{
+        display: none;
+    }
+    }
