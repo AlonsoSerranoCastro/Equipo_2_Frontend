@@ -1,9 +1,11 @@
-body { /*Estilo del cuerpo */
+body {
+  /*Estilo del cuerpo */
   background: #fff;
 }
 
 
-.login-box { /*Caja del formato  */
+.login-box {
+  /*Caja del formato  */
   width: 100%;
   padding: 40px;
   background: #272932;
@@ -11,50 +13,57 @@ body { /*Estilo del cuerpo */
   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
   border-radius: 10px;
 }
-.tituloContacto { /*Estilo del titulo "Contacto"*/
+
+.tituloContacto {
+  /*Estilo del titulo "Contacto"*/
   margin: 0 0 30px;
   padding: 0;
   color: #135B11;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-font-family: 'Fredoka';
-font-style: bold;
-font-weight: 900;
-font-size: 64px;
-line-height: 77px;
-text-align: center;
--webkit-text-stroke: 1.5px #272932;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Fredoka';
+  font-style: bold;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+  -webkit-text-stroke: 1.5px #272932;
 }
 
-.textoNodudes { /*Estilo del texto "H2 "*/
+.textoNodudes {
+  /*Estilo del texto "H2 "*/
   margin: 0 0 30px;
   padding: 0;
   color: #272932;
-font-family: 'Handlee';
-font-size: 32px;
-font-weight: 400;
-line-height: 43px;
-letter-spacing: 0em;
-text-align: center;
+  font-family: 'Handlee';
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: center;
 
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25); ;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  ;
 
-  
+
 }
-.form-check-label{ /* estilo de los puntos para marcar "*/
+
+.form-check-label {
+  /* estilo de los puntos para marcar "*/
   color: #fff;
   text-align: justify;
   font-family: 'Handlee';
-font-size: 16px;
-font-weight: 400;
-line-height: 43px;
-letter-spacing: 0em;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0em;
 }
 
 .login-box .user-box {
   position: relative;
 }
 
-.login-box .user-box input { /*Estilo del texto dentro del formulario(Datos a llenar) */
+.login-box .user-box input {
+  /*Estilo del texto dentro del formulario(Datos a llenar) */
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -65,12 +74,13 @@ letter-spacing: 0em;
   outline: none;
   background: transparent;
   font-family: 'Handlee';
-letter-spacing: 0em;
+  letter-spacing: 0em;
 
 
 }
 
-.login-box .user-box label { /*Estilo del texto que aparece en el formulario(Nombre,correo,numero) */
+.login-box .user-box label {
+  /*Estilo del texto que aparece en el formulario(Nombre,correo,numero) */
   position: absolute;
   top: 0;
   left: 0;
@@ -79,7 +89,7 @@ letter-spacing: 0em;
   color: #fff;
   pointer-events: none;
   transition: .5s;
-  
+
   font-family: 'Handlee';
   letter-spacing: 0em;
   text-align: center;
@@ -87,17 +97,19 @@ letter-spacing: 0em;
 }
 
 .login-box .user-box input:focus~label,
-.login-box .user-box input:valid~label { /*Estilo del texto que se hace pequeño */
+.login-box .user-box input:valid~label {
+  /*Estilo del texto que se hace pequeño */
   top: -20px;
   left: 0;
   color: #FCC875;
   font-size: 12px;
   font-family: 'Handlee';
-letter-spacing: 0em;
-text-align: center;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
-.login-box  a { /*Estilo del boton  */
+.login-box a {
+  /*Estilo del boton  */
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -114,7 +126,8 @@ text-align: center;
   text-align: center;
 }
 
-.login-box a:hover { /*Estilo del hover del botón */
+.login-box a:hover {
+  /*Estilo del hover del botón */
   background: #FCC875;
   color: #fff;
   border-radius: 10px;
@@ -122,10 +135,12 @@ text-align: center;
 
 }
 
+/*Palabra que contiene el botón*/
 .login-box a span {
   position: absolute;
   display: block;
 }
+
 /*A partir de aquí se anima el botón con la línea*/
 .login-box a span:nth-child(1) {
   top: 0;
@@ -136,10 +151,12 @@ text-align: center;
   animation: btn-anim1 1s linear infinite;
 }
 
+/*Lista de errores que muestra el alert al enviar formulario*/
 .listaDeErrores {
   list-style-type: none;
 }
 
+/*Botón del alert insertado con sweet alert2*/
 .swal2-styled.swal2-confirm {
   border-radius: .25em;
   background: initial;
@@ -148,6 +165,7 @@ text-align: center;
   font-size: 1em;
 }
 
+/*Título del botón del alert insertado con sweet alert2*/
 #swal2-title {
   position: relative;
   max-width: 100%;
