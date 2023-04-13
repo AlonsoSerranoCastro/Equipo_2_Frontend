@@ -1,0 +1,38 @@
+nav{ background-color: #272932;
+height: 120px   ;
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+justify-content:  space-between;
+
+
+
+}
+
+.nav-link{
+    color: #E7ECEF;
+    margin: 0 0 30px;
+    padding: 0;
+    font-family: 'Fredoka';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center
+  }
+
+.logoNav{
+    width: 120px;
+    height: 100%;
+}
+
+.collapse{
+    background-color: #272932;
+    border:none;
+    font-size: 30px;
+    border-radius: 15px;
+    position:relative;
+    padding: 25px;
+
+}
