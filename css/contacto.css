@@ -78,7 +78,16 @@ body {
 
 
 }
-
+#sucursales{
+   background-color:  #272932; 
+   color: #fff;
+   font-family: 'Handlee';
+  letter-spacing: 0em;
+  text-align: center;
+  border-bottom: 3px solid #FCC875;
+  border-radius: 3px;
+ 
+}
 .login-box .user-box label {
   /*Estilo del texto que aparece en el formulario(Nombre,correo,numero) */
   position: absolute;
