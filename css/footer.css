@@ -1,3 +1,4 @@
+
 .footStyle{
     background-color: #D2D2D2;
     padding-top: 2%;
@@ -6,6 +7,10 @@
     padding-top: 2%;
    }
    
+   .bottom{
+    margin-top: 50px;
+
+   }
    .containerBig{
       max-width: 800px;
       text-align: center;
