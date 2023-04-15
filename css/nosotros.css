@@ -18,7 +18,7 @@ span {
   box-shadow: 0 2px 4px 2.5px rgb(0, 0, 0);
 }
 
-h1 {
+h1.titulo {
   font-family: 'Fredoka';
   font-style: normal;
   font-weight: 700;
@@ -30,18 +30,19 @@ h1 {
 
 }
 
-h3 {
+h3.texto {
   background-color: #FCC875;
   text-align: justify;
   border-radius: 15px;
-  padding: 15px;
+  padding: 1.5rem;
   font-family: 'lato';
   box-shadow: 0 4px 8px 0 rgba(237, 231, 231, 0.25);
   color: #272932;
   box-shadow: 0 2px 4px 2.5px rgb(0, 0, 0);
+  font-size: 20px ;
 }
 
-h4 {
+.mi-h4{
   background-color: #FCC875;
   text-align: justify;
   border-radius: 15px;
@@ -52,19 +53,22 @@ h4 {
   color: #272932;
   box-shadow: 0 2px 4px 2.5px rgb(0, 0, 0);
   position: relative;
-  top: 30px;
+  top: 5rem;
+  font-size: 15px;
+  
 }
 
 p.nombres {
   color: #ffffff;
 }
 
-p {
+.mi-p {
   color: #272932;
+  font-size: 13px;
 
 }
 
-a {
+.mi-a {
   font-size: 'handlee';
   color: #fff;
   background: #272932;
@@ -76,13 +80,13 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
+.mi-wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: 80rem;
 }
 
-.cols {
+.mi-cols {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,22 +97,20 @@ a {
   justify-content: center;
 }
 
-.col {
+.mi-col {
   width: calc(25% - 1.5rem);
   margin: 1rem;
   cursor: pointer;
 }
 
-.container {
+.mi-container {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-perspective: 1000px;
   perspective: 1000px;
 }
 
-.front,
-/* parte de enfrente*/
-.back {
+.mi-front,.mi-back {/* parte de enfrente*/
   background-size: cover;
   box-shadow: 0 2px 4px 2.5px rgb(0, 0, 0);
   border-radius: 10px;
@@ -126,10 +128,11 @@ a {
   border-radius: 10px;
   color: #fff;
   font-size: 1rem;
+  margin-top: 20px;
 
 }
 
-.back {
+.mi-back {
   /* Fondo de atras  */
   background: #FCC875;
   background: -webkit-linear-gradient(45deg, #FCC875 0%, #FCC875 100%);
@@ -137,7 +140,7 @@ a {
   background: linear-gradient(45deg, #FCC875 0%, #FCC875 100%);
 }
 
-.front:after {
+.mi-front:after {
   /* esta parte es de la opacidad denfrente */
   position: absolute;
   top: 0;
@@ -154,8 +157,8 @@ a {
   border-radius: 10px;
 }
 
-.container:hover .front,
-.container:hover .back {
+.mi-mi-container:hover .mi-front,
+.mi-container:hover .mi-back {
   -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
   -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -163,14 +166,14 @@ a {
   transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.back {
+.mi-back {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-.inner {
+.mi-inner {
   -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 100%;
@@ -186,7 +189,7 @@ a {
   z-index: 2;
 }
 
-.inner1 {
+.mi-inner1 {
   -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
@@ -202,14 +205,14 @@ a {
   z-index: 2;
 }
 
-.container .back {
+.mi-container .mi-back {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.container .front {
+.mi-container .mi-front {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   -webkit-transform-style: preserve-3d;
@@ -217,21 +220,21 @@ a {
   background-color: #272932;
 }
 
-.container:hover .back {
+.mi-container:hover .mi-back {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.container:hover .front {
+.mi-container:hover .mi-front {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.front .inner p {
+.mi-front .mi-inner p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   position: relative;
@@ -240,7 +243,7 @@ a {
 
 
 
-.front .inner span {
+.mi-front .mi-inner span {
   color: rgba(255, 255, 255, 0.977);
   font-family: 'Lato';
   font-weight: 300;
@@ -248,19 +251,19 @@ a {
 }
 
 @media screen and (max-width: 64rem) {
-  .col {
+  .mi-col {
     width: calc(33.333333% - 2rem);
   }
 }
 
 @media screen and (max-width: 48rem) {
-  .col {
+  .mi-col {
     width: calc(50% - 2rem);
   }
 }
 
 @media screen and (max-width: 32rem) {
-  .col {
+  .mi-col {
     width: 100%;
     margin: 0 0 2rem 0;
   }
