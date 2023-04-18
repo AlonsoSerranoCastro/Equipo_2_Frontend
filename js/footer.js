@@ -10,6 +10,6 @@
    var footer = temporal.querySelector('footer');
 
    // Agregar <footer> al documento
-   var contenedor = document.getElementById('contenedor');
-   contenedor.appendChild(footer);
+   var contenedorFooter = document.getElementById('contenedorFooter');
+   contenedorFooter.appendChild(footer);
  });
