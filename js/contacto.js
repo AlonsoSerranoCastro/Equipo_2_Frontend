@@ -34,7 +34,7 @@ txtNombre.addEventListener("blur", function (event) {
 //Se definen las constantes con expresiones regulares para poner parámetros de utilización sobre los campos a rellenar del formulario
 const regexName = (/^[A-Za-záéíóúÁÉÍÓÚÑñ\s]{3,}$/);
 const regexEmail = (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/);
-const regexTelefono = (/^[3-9\s]{1}[1-9\s]{1}[0-9\s]{8}$/);
+const regexTelefono = (/^[1-9\s]{1}[1-9\s]{1}[0-9\s]{8}$/);
 const regexMensaje = (/^[\s\S]{5,150}$/);
 
 // función para validar los diferentes errores que existen en los campos del formulario y agregarlos a la variable msgError
