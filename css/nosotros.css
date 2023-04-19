@@ -67,7 +67,9 @@ p.nombres {
 
 .mi-p {
   color: #272932;
-  font-size: 13px;
+
+  font-family: 'lato';
+  font-size: 18px;
 
 }
 
