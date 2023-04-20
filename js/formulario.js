@@ -93,10 +93,10 @@ btnProducto.addEventListener("click", function (event) {
          }
          //let jsonNuevoProducto = JSON.stringify(nuevoProducto);
          //console.log(jsonNuevoProducto);
-         Swal.fire("Producto Creado Correctamente");
+         /* Swal.fire("Producto Creado Correctamente");
          jsonMenu.push(nuevoProducto);
          let jsonMenu2 = JSON.stringify(jsonMenu)
-         console.log(jsonMenu2);
+         console.log(jsonMenu2); */
     }
 });
 
