@@ -35,37 +35,29 @@ btnProducto.addEventListener("click", function (event) {
     event.preventDefault();
     let cont = 0;
 
-    if (validarNombre(nombreFormulario.value)) {
+    if (validarNombreFormulario(nombreFormulario.value)) {
     } else {
         console.log(msgError);
         cont += 1;
     }
-    if (validarEmail(txtEmail.value)) {
-    } else {
-        console.log(msgError);
-        cont += 1;
-    }
-
-    if (validarTelefono(txtTelefono.value)) {
-
+    if (validarPrecioFormulario(precioFormulario.value)) {
     } else {
         console.log(msgError);
         cont += 1;
     }
 
-    if (validarMensaje(txtMensaje.value)) {
-
+    if (validarDescripcionFormulario(descripcionFormulario.value)) {
     } else {
         console.log(msgError);
         cont += 1;
     }
 
-    if (validarSucursal(txtSucursales.value)) {
-
+    if (validarCategoriaFormulario(categoriaFormulario.value)) {
     } else {
         console.log(msgError);
         cont += 1;
     }
+    
     //Alert insertado mediante la página sweet alert2
     if (cont > 0) {
         let htmlAlert = `<ul class = listaDeErrores> Tienes errores en los siguientes campos: ${msgError}</ul>`;
@@ -82,69 +74,52 @@ btnProducto.addEventListener("click", function (event) {
 
         //else que muestra los datos del error mediante las sugerencias
     } else {
-        let sugerencias = "Nombre: " + txtNombre.value + "\nE-mail: " + txtEmail.value + "\nTeléfono: " + txtTelefono.value + "\nSucursales: " + txtSucursales.value + "\nMensaje: " + txtMensaje.value;
-
-        // Es donde se envía el correo mediante SMTPJS
-        Email.send({
-            SecureToken: "598073ae-0fff-4b3a-bc8d-3de1756015b4",
-            To: 'burgershouse2023@gmail.com',
-            From: "burgershouse2023@gmail.com",
-            Subject: "Buzón de Quejas y Sugerencias BurgersHouse",
-            Body: sugerencias,
-        }).then(
-            message => Swal.fire("Sugerencia enviada")
-        )
+        let nuevoProducto = {
+            "id": 21,
+            "nombre": nombreFormulario.value,
+            "img": imgFormulario.value,
+            "descripción": descripcionFormulario.value,
+            "precio": precioFormulario.value,
+            "categoría": categoriaFormulario.value
+         }
+         let jsonNuevoProducto = JSON.stringify(nuevoProducto);
+         console.log(jsonNuevoProducto);
     }
-
 });
+
 //Función para validar los datos del formulario con los mensajes que muestran los errores en formato de lista desordenada
-function validarNombre(nombre) {
-    if (regexName.test(nombre)) {
+function validarNombreFormulario(nombreFormulario) {
+    if (regexNombreFormulario.test(nombreFormulario)) {
         return true;
-
     } else {
-        msgError += "<li> Nombre No Válido</li>";
+        msgError += "<li> Nombre Del Producto No Válido </li>";
         return false;
     }
 }
 
-function validarEmail(email) {
-    if (regexEmail.test(email)) {
+function validarPrecioFormulario(precioFormulario) {
+    if (regexPrecioFormulario.test(precioFormulario)) {
         return true;
-
-
     } else {
-        msgError += "<li>Email No Válido</li>";
+        msgError += '<li> Precio No Válido </li>';
         return false;
     }
 }
-function validarTelefono(telefono) {
-    if (regexTelefono.test(telefono)) {
+
+function validarDescripcionFormulario(descripcionFormulario) {
+    if (regexDescripcionFormulario.test(descripcionFormulario)) {
         return true;
-
-
     } else {
-        msgError += '<li> Teléfono No Válido </li>';
+        msgError += " <li> La Descripción No Es Válida </li>";
         return false;
     }
 }
-function validarMensaje(mensaje) {
-    if (regexMensaje.test(mensaje)) {
+
+function validarCategoriaFormulario(categoriaFormulario) {
+    if (categoriaFormulario != "value0") {
         return true;
-
-
     } else {
-        msgError += " <li> Mensaje No Válido </li>";
-        return false;
-    }
-}
-function validarSucursal(sucursal) {
-    if (sucursal != "value0") {
-        return true;
-
-
-    } else {
-        msgError += "<li> Selecciona Una Sucursal Válida </li>";
+        msgError += "<li> Selecciona Una Categoría Válida </li>";
         return false;
     }
 }
