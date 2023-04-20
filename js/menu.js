@@ -91,7 +91,7 @@ let jsonMenu = [
   "id": 12,
   "nombre": "Papas a la francesa",
   "img": "/src/imgmenu/papasFrancesa.jpg",
-  "Descripción": "Papas con corte clásico a la francesa con sal rosada del himalaya, muy crujientes.",
+  "descripción": "Papas con corte clásico a la francesa con sal rosada del himalaya, muy crujientes.",
    "precio": 80,
   "categoría": "Complementos"
     },
@@ -183,7 +183,15 @@ let jsonMenu = [
   "descripción": "Tequila Tradicional silver 44 ml, Toronja, Romero, Ginger Ale",
   "precio": 137,
   "categoría": "Bebidas alcohólicas"
-   }
+   },
+   {
+   "id": 24,
+   "nombre": "Pastel de chocolate",
+   "img": "/src/imgmenu/jericalla.jpg",
+   "descripción": "Delicioso pastel de chocolate con tres capas de bizcocho de chocolate y crema de chocolate, decorado con trozos de chocolate negro y frutos rojos.",
+   "precio": 98,
+   "categoría": "Postre"
+      }
    ];   
 
 
@@ -206,9 +214,10 @@ window.addEventListener("load", function(event){
                hmtlHamburguesas += `<div class="card" style="width: 18rem;">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
-                 <h5 class="card-title">${burguer.nombre}</h5>
-                 <p class="card-text">${burguer.descripción}</p>
-                 <a href="#" class="btn btn-primary">Ver más</a>
+                 <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
+                 <p class="card-description">${burguer.descripción}</p>
+                 <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                 <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
            break;
@@ -216,9 +225,10 @@ window.addEventListener("load", function(event){
            htmlPostres += `<div class="card" style="width: 18rem;">
            <img src="${burguer.img}" class="card-img-top" alt="...">
            <div class="card-body">
-             <h5 class="card-title">${burguer.nombre}</h5>
-             <p class="card-text">${burguer.descripción}</p>
-             <a href="#" class="btn btn-primary">Ver más</a>
+             <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
+             <p class="card-description">${burguer.descripción}</p>
+             <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+             <a href="#" class="btn btn-primary">Agregar</a>
            </div>
          </div>`;
            break;
@@ -226,9 +236,10 @@ window.addEventListener("load", function(event){
                htmlBebidas += `<div class="card" style="width: 18rem;">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
-                 <h5 class="card-title">${burguer.nombre}</h5>
-                 <p class="card-text">${burguer.descripción}</p>
-                 <a href="#" class="btn btn-primary">Ver más</a>
+                 <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
+                 <p class="card-description">${burguer.descripción}</p>
+                 <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                 <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
            break;
@@ -236,9 +247,10 @@ window.addEventListener("load", function(event){
                htmlComplementos += `<div class="card" style="width: 18rem;">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
-                 <h5 class="card-title">${burguer.nombre}</h5>
-                 <p class="card-text">${burguer.descripción}</p>
-                 <a href="#" class="btn btn-primary">Ver más</a>
+                 <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
+                 <p class="card-description">${burguer.descripción}</p>
+                 <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                 <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
            break;
@@ -246,9 +258,10 @@ window.addEventListener("load", function(event){
                htmlAlcohol += `<div class="card" style="width: 18rem;">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
-                 <h5 class="card-title">${burguer.nombre}</h5>
-                 <p class="card-text">${burguer.descripción}</p>
-                 <a href="#" class="btn btn-primary">Ver más</a>
+                 <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
+                 <p class="card-description">${burguer.descripción}</p>
+                 <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                 <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
            break;

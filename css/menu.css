@@ -1,4 +1,77 @@
+.menuContenido{
+    display: grid;
+    justify-content: center;
+}
+.tituloMenu {
+    /*Estilo del titulo "Contacto"*/
+    margin: 0 0 30px;
+    padding: 0;
+    color: #135B11;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Fredoka';
+    font-style: bold;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+    -webkit-text-stroke: 1.5px #272932;
+  }
+  .card:hover{
+
+    transform: scale(1.1, 1.1);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+
 .card{
+    background-color: #272932;
+    align-items: center;
     display: inline-table;
     border:1px solid black;
+    width: 18rem;
+    height: 30rem;
+    margin: 1.5rem;
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25);
+    border-radius: 5%;
+}
+.card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    display: flex;
+}
+.card-title{
+    color: #ffffff;
+}
+.card-description{
+    display: flex;
+    text-align: left;
+    color: #ffffff;
+}
+.card-precio{
+    display: flex;
+    text-align: left;
+    font-size:x-large;
+    color:#ffffff;
+}
+.btn-primary{
+    background-color: #135B11;
+    color: #ffffff;
+    border: 1px solid #135B11;
+    
+}
+.btn-primary:hover{
+    background-color:#FCC875;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
 }
