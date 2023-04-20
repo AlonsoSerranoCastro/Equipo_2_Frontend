@@ -3,7 +3,7 @@
   justify-content: center;
 }
 .tituloMenu {
-  /*Estilo del titulo "Contacto"*/
+  /Estilo del titulo "Contacto"/
   margin: 0 0 30px;
   padding: 0;
   color: #135b11;
@@ -36,8 +36,8 @@
 
 .card-img-top {
   border-radius: 10%;
-  width: 80%;
-  height: 50%;
+  width: 15rem; /* de % a rem */
+  height: 14rem;
   object-fit: cover;
   display: block;
   margin: auto;
@@ -58,12 +58,18 @@
   text-align: left;
   font-size: x-large;
   color: #ffffff;
+  margin-top: auto;
 }
 .btn-primary {
   background-color: #135b11;
   color: #ffffff;
   border: 1px solid #135b11;
   display: grid;
+  position: absolutes;
+  bottom: 5%;
+  width: 16rem;
+  margin-block-end: 2rem;
+  margin-block-end: 2rem;
 }
 .btn-primary:hover {
   background-color: #fcc875;
@@ -78,5 +84,77 @@
   to {
     margin-left: 0%;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .card-description {
+    display: flex;
+    text-align: left;
+    color: #ffffff;
+    margin-block: 1rem;
+  }
+  .card-img-top {
+    border-radius: 10%;
+    width: 15rem;
+    height: 14rem;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    padding-top: 6%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* para tablet */
+  .card {
+    width: 100%;
+  }
+
+  .card-img-top {
+    height: 50%;
+    /* padding-top: 10%; */
+    width: 80%;
+  }
+
+  .card-description {
+    height: 30%;
+    font-size: smaller;
+    margin-inline: 1rem;
+  }
+
+  .card-precio {
+    height: 20%;
+    font-size: medium;
+    margin-left: 2rem;
+  }
+
+  .btn-primary {
+    font-size: smaller;
+    padding: 5px;
+    position: absolute;
+    margin-top: 2rem;
+    margin-block-end: 0rem;
+    width: 16rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* para móvil */
+  .menuContenido {
+    position: relative;
+  }
+  .card-description {
+    font-size: x-small;
+    margin-inline: 2rem;
+  }
+
+  .card-precio {
+    font-size: small;
+  }
+
+  .btn-primary {
+    font-size: x-small;
+    padding: 3px;
+    position: absolute;
+    margin-top: 2rem;
+    margin-block-end: 2rem;
   }
 }

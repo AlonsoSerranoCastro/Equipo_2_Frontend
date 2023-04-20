@@ -1,55 +1,46 @@
 //Se definen las variables totales a utilizar en este JavaScript
-let txtNombre = document.getElementById("nombre");
-let txtEmail = document.getElementById("email");
-let txtTelefono = document.getElementById("telefono");
-let txtSucursales = document.getElementById("sucursales");
-let txtMensaje = document.getElementById("mensaje");
-let btnContacto = document.getElementById("btnContacto");
+let nombreFormulario = document.getElementById("nombreFormulario");
+let imgFormulario = document.getElementById("imgFormulario");
+let precioFormulario = document.getElementById("precioFormulario");
+let descripcionFormulario = document.getElementById("descripcionFormulario");
+let categoriaFormulario = document.getElementById("categoriaFormulario");
+let btnProducto = document.getElementById("btnProducto");
 let alerta = document.getElementById("alertValidaciones");
 let txtAlerta = document.getElementById("alertValidacionesTexto");
 let msgError = "";
 
 //Listener acerca de los diferentes campos a rellenar en el formulario de contacto
-txtNombre.addEventListener("blur", function (event) {
+nombreFormulario.addEventListener("blur", function (event) {
     event.preventDefault();
-    txtNombre.value.trim();
+    nombreFormulario.value.trim();
 
-    txtEmail.addEventListener("blur", function (event) {
+    precioFormulario.addEventListener("blur", function (event) {
         event.preventDefault();
-        txtEmail.value = txtEmail.value.trim();
+        precioFormulario.value = precioFormulario.value.trim();
     });
 
-    txtTelefono.addEventListener("blur", function (event) {
+    descripcionFormulario.addEventListener("blur", function (event) {
         event.preventDefault();
-        txtTelefono.value = txtTelefono.value.trim();
-    });
-
-    txtMensaje.addEventListener("blur", function (event) {
-        event.preventDefault();
-        txtMensaje.value = txtMensaje.value.trim();
+        descripcionFormulario.value = descripcionFormulario.value.trim();
     });
 });
 
 //Se definen las constantes con expresiones regulares para poner parámetros de utilización sobre los campos a rellenar del formulario
-const regexName = (/^[A-Za-záéíóúÁÉÍÓÚÑñ\s]{3,}$/);
-const regexEmail = (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/);
-const regexTelefono = (/^[1-9\s]{1}[1-9\s]{1}[0-9\s]{8}$/);
-const regexMensaje = (/^[\s\S]{5,150}$/);
+const regexNombreFormulario = (/^[A-Za-záéíóúÁÉÍÓÚÑñ\s]{3,}$/);
+const regexPrecioFormulario = (/^\d{1,3}(\.\d{1,2})?$/);
+const regexDescripcionFormulario = (/^[\s\S]{5,150}$/);
 
 // función para validar los diferentes errores que existen en los campos del formulario y agregarlos a la variable msgError
-btnContacto.addEventListener("click", function (event) {
+btnProducto.addEventListener("click", function (event) {
     event.preventDefault();
     let cont = 0;
 
-    if (validarNombre(txtNombre.value)) {
-
-
+    if (validarNombre(nombreFormulario.value)) {
     } else {
         console.log(msgError);
         cont += 1;
     }
     if (validarEmail(txtEmail.value)) {
-
     } else {
         console.log(msgError);
         cont += 1;
