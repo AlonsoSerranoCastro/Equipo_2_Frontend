@@ -1,6 +1,5 @@
 let jsonMenu = [
   {
-    id: 1,
     nombre: "Burger BBQ",
     img: "/src/imgmenu/burgerBbq.jpeg",
     descripción: "Exquisita Hamburguesa de res, tocino, queso gouda.",
@@ -8,7 +7,6 @@ let jsonMenu = [
     categoría: "Hamburguesas",
   },
   {
-    id: 2,
     nombre: "Burger Doble con queso",
     img: "/src/imgmenu/burgerDobleconqueso.jpeg",
     descripción: "Exquisita Hamburguesa de res, queso blue cheese.",
@@ -16,7 +14,6 @@ let jsonMenu = [
     categoría: "Hamburguesas",
   },
   {
-    id: 3,
     nombre: "Burger choriqueso",
     img: "/src/imgmenu/burgerChoriqueso.jpeg",
     descripción:
@@ -25,7 +22,6 @@ let jsonMenu = [
     categoría: "Hamburguesas",
   },
   {
-    id: 4,
     nombre: "Burger Mexicana",
     img: "/src/imgmenu/burger Mexicana.jpg",
     descripción:
@@ -34,7 +30,6 @@ let jsonMenu = [
     categoría: "Hamburguesas",
   },
   {
-    id: 5,
     nombre: "Burger de pollo",
     img: "/src/imgmenu/burgerde pollo.jpeg",
     descripción:
@@ -43,7 +38,6 @@ let jsonMenu = [
     categoría: "Hamburguesas",
   },
   {
-    id: 6,
     nombre: "Burger blue cheese",
     img: "/src/imgmenu/ burgerblue cheese.jpeg",
     descripción:
@@ -52,7 +46,6 @@ let jsonMenu = [
     categoría: "Hamburguesas",
   },
   {
-    id: 7,
     nombre: "Brownie con nieve",
     img: "/src/imgmenu/brownie.jpg",
     descripción:
@@ -61,7 +54,6 @@ let jsonMenu = [
     categoría: "Postre",
   },
   {
-    id: 8,
     nombre: "Jericallas",
     img: "/src/imgmenu/jericalla.jpg",
     descripción:
@@ -70,7 +62,6 @@ let jsonMenu = [
     categoría: "Postre",
   },
   {
-    id: 9,
     nombre: "Limonada Mineral",
     img: "/src/imgmenu/bebidasLimonadaMineral.jpg",
     descripción:
@@ -79,7 +70,6 @@ let jsonMenu = [
     categoría: "Bebidas",
   },
   {
-    id: 10,
     nombre: "Agua Mineral",
     img: "/src/imgmenu/bebidasAguaMineral.jpg",
     descripción:
@@ -88,7 +78,6 @@ let jsonMenu = [
     categoría: "Bebidas",
   },
   {
-    id: 11,
     nombre: "Refrescos del día",
     img: "/src/imgmenu/bebidasRefresco.jpg",
     descripción:
@@ -97,7 +86,6 @@ let jsonMenu = [
     categoría: "Bebidas",
   },
   {
-    id: 12,
     nombre: "Papas a la francesa",
     img: "/src/imgmenu/papasFrancesa.jpg",
     descripción:
@@ -106,7 +94,6 @@ let jsonMenu = [
     categoría: "Complementos",
   },
   {
-    id: 13,
     nombre: "Papas gajo",
     img: "/src/imgmenu/papasGajo.jpg",
     descripción:
@@ -115,7 +102,6 @@ let jsonMenu = [
     categoría: "Complementos",
   },
   {
-    id: 14,
     nombre: "Aros de Cebolla",
     img: "/src/imgmenu/arosCebolla.jpg",
     descripción:
@@ -124,7 +110,6 @@ let jsonMenu = [
     categoría: "Complementos",
   },
   {
-    id: 15,
     nombre: "Elotitos preparados",
     img: "/src/imgmenu/elotePreparado.jpg",
     descripción:
@@ -133,7 +118,6 @@ let jsonMenu = [
     categoría: "Complementos",
   },
   {
-    id: 16,
     nombre: "Pa probar",
     img: "/src/imgmenu/paCompartir.JPG",
     descripción:
@@ -141,9 +125,7 @@ let jsonMenu = [
     precio: 290,
     categoría: "Complementos",
   },
-
   {
-    id: 17,
     nombre: "Alitas de pollo teriyaki",
     img: "/src/imgmenu/alitasPolloTeriyaki.jpg",
     descripción:
@@ -152,7 +134,6 @@ let jsonMenu = [
     categoría: "Complementos",
   },
   {
-    id: 18,
     nombre: "Dedos de queso",
     img: "/src/imgmenu/dedosDeQueso.jpg",
     descripción:
@@ -161,7 +142,6 @@ let jsonMenu = [
     categoría: "Complementos",
   },
   {
-    id: 19,
     nombre: "Cerveza XX lager",
     img: "/src/imgmenu/cervezaX.jpg",
     descripción: "Envase de 355 ml",
@@ -169,7 +149,6 @@ let jsonMenu = [
     categoría: "Bebidas alcohólicas",
   },
   {
-    id: 20,
     nombre: "Cerveza artesanal tempus dorada",
     img: "/src/imgmenu/cervezaArtesanal.jpg",
     descripción: "Cerveza ligera, con notas intensas a miel de 355 ml.",
@@ -177,7 +156,6 @@ let jsonMenu = [
     categoría: "Bebidas alcohólicas",
   },
   {
-    id: 21,
     nombre: "Mojito Azul",
     img: "/src/imgmenu/mojitoAzul.jpg",
     descripción:
@@ -186,7 +164,6 @@ let jsonMenu = [
     categoría: "Bebidas alcohólicas",
   },
   {
-    id: 22,
     nombre: "Mango tropical",
     img: "/src/imgmenu/mangoTropical.jpg",
     descripción: "Mezcal 400 conejos 50 ml Mango, piña y chamoy",
@@ -194,7 +171,6 @@ let jsonMenu = [
     categoría: "Bebidas alcohólicas",
   },
   {
-    id: 23,
     nombre: "Paloma La Bonita",
     img: "/src/imgmenu/palomaTequila.jpg",
     descripción:
@@ -203,7 +179,6 @@ let jsonMenu = [
     categoría: "Bebidas alcohólicas",
   },
   {
-    id: 24,
     nombre: "Pastel de chocolate",
     img: "/src/imgmenu/pasteldechocolate.jpg",
     descripción:
@@ -211,26 +186,25 @@ let jsonMenu = [
     precio: 98,
     categoría: "Postre",
   },
-];   
+];
 
+window.addEventListener("load", function (event) {
+  event.preventDefault();
+  let divHamburguesas = document.getElementById("burguers");
+  let divPostres = document.getElementById("postres");
+  let divBebidas = document.getElementById("bebidas");
+  let divComplementos = document.getElementById("complementos");
+  let divAlcohol = document.getElementById("bebidasAlcoholicas");
+  let hmtlHamburguesas = "";
+  let htmlPostres = "";
+  let htmlBebidas = "";
+  let htmlComplementos = "";
+  let htmlAlcohol = "";
 
-window.addEventListener("load", function(event){
-   event.preventDefault();
-   let divHamburguesas = document.getElementById("burguers");
-   let divPostres = document.getElementById("postres");
-   let divBebidas = document.getElementById("bebidas");
-   let divComplementos = document.getElementById("complementos");
-   let divAlcohol = document.getElementById("bebidasAlcoholicas");
-   let hmtlHamburguesas = "";
-   let htmlPostres = "" ;
-   let htmlBebidas = "";
-   let htmlComplementos = "";
-   let htmlAlcohol = "";
-
-   jsonMenu.forEach(burguer =>{
-       switch(burguer.categoría){
-           case "Hamburguesas":
-               hmtlHamburguesas += `<div class="card" style="width: 18rem;">
+  jsonMenu.forEach(burguer => {
+    switch (burguer.categoría) {
+      case "Hamburguesas":
+        hmtlHamburguesas += `<div class="card" style="width: 18rem;">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
@@ -239,9 +213,9 @@ window.addEventListener("load", function(event){
                  <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
-           break;
-           case "Postre":
-           htmlPostres += `<div class="card" style="width: 18rem;">
+        break;
+      case "Postre":
+        htmlPostres += `<div class="card" style="width: 18rem;">
            <img src="${burguer.img}" class="card-img-top" alt="...">
            <div class="card-body">
              <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
@@ -250,9 +224,9 @@ window.addEventListener("load", function(event){
              <a href="#" class="btn btn-primary">Agregar</a>
            </div>
          </div>`;
-           break;
-           case "Bebidas":
-               htmlBebidas += `<div class="card" style="width: 18rem;">
+        break;
+      case "Bebidas":
+        htmlBebidas += `<div class="card" style="width: 18rem;">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
@@ -261,9 +235,9 @@ window.addEventListener("load", function(event){
                  <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
-           break;
-           case "Complementos":
-               htmlComplementos += `<div class="card" style="width: 18rem;">
+        break;
+      case "Complementos":
+        htmlComplementos += `<div class="card" style="width: 18rem;">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
@@ -272,9 +246,9 @@ window.addEventListener("load", function(event){
                  <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
-           break;
-           case "Bebidas alcohólicas":
-               htmlAlcohol += `<div class="card" style="width: 18rem;">
+        break;
+      case "Bebidas alcohólicas":
+        htmlAlcohol += `<div class="card" style="width: 18rem;">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
@@ -283,12 +257,12 @@ window.addEventListener("load", function(event){
                  <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
-           break;
-       }
-   });    
-   divHamburguesas.insertAdjacentHTML("afterbegin", hmtlHamburguesas);
-   divPostres.insertAdjacentHTML("afterbegin", htmlPostres);
-   divBebidas.insertAdjacentHTML("afterbegin", htmlBebidas) ;
-   divComplementos.insertAdjacentHTML("afterbegin", htmlComplementos);
-   divAlcohol.insertAdjacentHTML("afterbegin", htmlAlcohol);
+        break;
+    }
+  });
+  divHamburguesas.insertAdjacentHTML("afterbegin", hmtlHamburguesas);
+  divPostres.insertAdjacentHTML("afterbegin", htmlPostres);
+  divBebidas.insertAdjacentHTML("afterbegin", htmlBebidas);
+  divComplementos.insertAdjacentHTML("afterbegin", htmlComplementos);
+  divAlcohol.insertAdjacentHTML("afterbegin", htmlAlcohol);
 });

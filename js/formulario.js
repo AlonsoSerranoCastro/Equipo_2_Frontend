@@ -1,3 +1,13 @@
+let jsonMenu = [
+    {
+      nombre: "Burger BBQ",
+      img: "/src/imgmenu/burgerBbq.jpeg",
+      descripción: "Exquisita Hamburguesa de res, tocino, queso gouda.",
+      precio: 226,
+      categoría: "Hamburguesas",
+    }
+];
+
 //Se definen las variables totales a utilizar en este JavaScript
 let nombreFormulario = document.getElementById("nombreFormulario");
 let imgFormulario = document.getElementById("imgFormulario");
@@ -75,15 +85,18 @@ btnProducto.addEventListener("click", function (event) {
         //else que muestra los datos del error mediante las sugerencias
     } else {
         let nuevoProducto = {
-            "id": 21,
             "nombre": nombreFormulario.value,
             "img": imgFormulario.value,
             "descripción": descripcionFormulario.value,
             "precio": precioFormulario.value,
             "categoría": categoriaFormulario.value
          }
-         let jsonNuevoProducto = JSON.stringify(nuevoProducto);
-         console.log(jsonNuevoProducto);
+         //let jsonNuevoProducto = JSON.stringify(nuevoProducto);
+         //console.log(jsonNuevoProducto);
+         Swal.fire("Producto Creado Correctamente");
+         jsonMenu.push(nuevoProducto);
+         let jsonMenu2 = JSON.stringify(jsonMenu)
+         console.log(jsonMenu2);
     }
 });
 
