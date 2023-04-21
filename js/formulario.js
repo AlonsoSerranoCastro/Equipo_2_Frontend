@@ -1,12 +1,3 @@
-let jsonMenu = [
-    {
-      nombre: "Burger BBQ",
-      img: "/src/imgmenu/burgerBbq.jpeg",
-      descripción: "Exquisita Hamburguesa de res, tocino, queso gouda.",
-      precio: 226,
-      categoría: "Hamburguesas",
-    }
-];
 
 //Se definen las variables totales a utilizar en este JavaScript
 let nombreFormulario = document.getElementById("nombreFormulario");
@@ -18,6 +9,10 @@ let btnProducto = document.getElementById("btnProducto");
 let alerta = document.getElementById("alertValidaciones");
 let txtAlerta = document.getElementById("alertValidacionesTexto");
 let msgError = "";
+
+// Recupera el archivo JSON almacenado en Local Storage
+let menu = JSON.parse(localStorage.getItem('menu'));
+console.log(menu);
 
 //Listener acerca de los diferentes campos a rellenar en el formulario de contacto
 nombreFormulario.addEventListener("blur", function (event) {
@@ -84,19 +79,56 @@ btnProducto.addEventListener("click", function (event) {
 
         //else que muestra los datos del error mediante las sugerencias
     } else {
-        let nuevoProducto = {
+        let nuevoProducto ={
             "nombre": nombreFormulario.value,
             "img": imgFormulario.value,
             "descripción": descripcionFormulario.value,
             "precio": precioFormulario.value,
             "categoría": categoriaFormulario.value
          }
-         //let jsonNuevoProducto = JSON.stringify(nuevoProducto);
-         //console.log(jsonNuevoProducto);
-         /* Swal.fire("Producto Creado Correctamente");
-         jsonMenu.push(nuevoProducto);
-         let jsonMenu2 = JSON.stringify(jsonMenu)
-         console.log(jsonMenu2); */
+         let jsonNuevoProducto = JSON.stringify(nuevoProducto);
+         console.log(jsonNuevoProducto);
+         let getMenu = [];
+        // Obtenemos los datos del Local Storage
+        let productosGuardados = localStorage.getItem('jsonNuevoProducto');
+
+        // Convertimos los datos a un array
+        let menuArray = JSON.parse(productosGuardados);
+         getMenu = menuArray;
+         getMenu.push(jsonNuevoProducto);
+         Swal.fire("Producto Creado Correctamente");
+        /*  let menuStringify = JSON.stringify(getMenu); 
+         this.localStorage.setItem("jsonNuevoProducto", menuStringify); */
+         console.log(getMenu);
+         console.log(getMenu[23]);
+
+        function agregarProducto(jsonNuevoProducto){
+            menu.push(jsonNuevoProducto)
+            localStorage.setItem('nuevoProducto', JSON.stringify(jsonNuevoProducto));
+            console.log(agregarProducto);
+            cargarNuevoProducto();
+        }
+
+        function cargarNuevoProducto() {
+            const itemsContainer = document.getElementById("menuContenido");
+            let contador = 1;
+                itemsContainer.innerHTML = "";
+
+                agregarProducto(burguer => {
+                    let newBurger = `<div class="card" style="width: 18rem;">
+                    <img src="${burguer.img}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
+                      <p class="card-description">${burguer.descripción}</p>
+                      <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                      <a href="#" class="btn btn-primary">Agregar</a>
+                    </div>
+                  </div>`;
+                });
+            let getMenu = [];
+            console.log(newBurger);
+                getMenu.push(newBurger);
+        }
     }
 });
 

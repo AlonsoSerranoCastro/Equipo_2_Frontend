@@ -187,8 +187,16 @@ let jsonMenu = [
     categoría: "Postre",
   },
 ];
+//Se sube la información del json a localStorage
+localStorage.setItem('menu', JSON.stringify(jsonMenu));
 
 window.addEventListener("load", function (event) {
+  let retSessionMenu = JSON.parse(this.localStorage.getItem("jsonNuevoProducto"));
+  if (retSessionMenu == null ) {
+    this.localStorage.setItem('jsonNuevoProducto', JSON.stringify(jsonMenu));
+  }
+  else {
+
   event.preventDefault();
   let divHamburguesas = document.getElementById("burguers");
   let divPostres = document.getElementById("postres");
@@ -201,7 +209,7 @@ window.addEventListener("load", function (event) {
   let htmlComplementos = "";
   let htmlAlcohol = "";
 
-  jsonMenu.forEach(burguer => {
+  retSessionMenu.forEach(burguer => {
     switch (burguer.categoría) {
       case "Hamburguesas":
         hmtlHamburguesas += `<div class="card" style="width: 18rem;">
@@ -265,4 +273,5 @@ window.addEventListener("load", function (event) {
   divBebidas.insertAdjacentHTML("afterbegin", htmlBebidas);
   divComplementos.insertAdjacentHTML("afterbegin", htmlComplementos);
   divAlcohol.insertAdjacentHTML("afterbegin", htmlAlcohol);
+}//else
 });
