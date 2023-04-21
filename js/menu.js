@@ -191,11 +191,12 @@ let jsonMenu = [
 localStorage.setItem('menu', JSON.stringify(jsonMenu));
 
 window.addEventListener("load", function (event) {
-  let retSessionMenu = JSON.parse(this.localStorage.getItem("jsonNuevoProducto"));
+  let retSessionMenu = JSON.parse(localStorage.getItem("jsonNuevoProducto"));
   if (retSessionMenu == null ) {
-    this.localStorage.setItem('jsonNuevoProducto', JSON.stringify(jsonMenu));
+    localStorage.setItem('jsonNuevoProducto', JSON.stringify(jsonMenu));
   }
   else {
+    console.log(retSessionMenu);
 
   event.preventDefault();
   let divHamburguesas = document.getElementById("burguers");
