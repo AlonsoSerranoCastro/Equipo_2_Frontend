@@ -5,7 +5,6 @@ let txtTelefono = document.getElementById("telefono");
 let txtSucursales = document.getElementById("sucursales");
 let txtMensaje = document.getElementById("mensaje");
 let btnContacto = document.getElementById("btnContacto");
-let checkPolitica = document.getElementById("publicidad");
 let alerta = document.getElementById("alertValidaciones");
 let txtAlerta = document.getElementById("alertValidacionesTexto");
 let msgError = "";
