@@ -24,16 +24,11 @@ img {
  
 }
 
-a:hover{
+.nav-link:hover:hover{
   background-color: #FCC875;
   border-radius: 10px;
   text-align: center;
 }
-
-
-  
-  
-  
 
 .collapse{
 color: #FCC875;   
@@ -46,86 +41,55 @@ color: #FCC875;
 #carritoBurger{
  position: relative;
  right: 3rem;
-
-  
-}
-#carritoBurger:hover{
-  background-color: transparent;
-
-   
 }
 
 #logoLogin{
   position: relative;
  top: 2.5rem;
- 
-  
 }
-
-
 
 
 @media(max-width:768px){
-
   .container-fluid{
-
       padding: 0 10%;
   }
 }
+
 .navbar-toggler{
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
+
 img{
   display: flex;
   align-items: center;
   width: 10rem;
   height: 10rem;
- 
 }
-
 
 #logoLogin{
    position: relative;
   top: 3rem;
-  
-   
 }
 
 a:hover{
-
   width: 8rem;
 }
 
-
-
-/* modal */
-
 .modal-dialog{
-
   margin: 0;
   width: 430px;
 }
 
 @media(max-width: 320px){
-
   .container-fluid{
-
       width: 100%;
   }
 }
 
-
-
-
-
-
-
 @media(max-width:767px){
-
   .section-1 p{
-
       font-size: 50px;
       text-align: start;
       width: 70%;
