@@ -187,15 +187,14 @@ let jsonMenu = [
     categoría: "Postre",
   },
 ];
-//Se sube la información del json a localStorage
-localStorage.setItem('menu', JSON.stringify(jsonMenu));
+
 
 window.addEventListener("load", function (event) {
   let retSessionMenu = JSON.parse(localStorage.getItem("jsonNuevoProducto"));
   if (retSessionMenu == null ) {
     localStorage.setItem('jsonNuevoProducto', JSON.stringify(jsonMenu));
+    retSessionMenu = JSON.parse(localStorage.getItem("jsonNuevoProducto"));
   }
-  else {
     console.log(retSessionMenu);
 
   event.preventDefault();
@@ -274,5 +273,5 @@ window.addEventListener("load", function (event) {
   divBebidas.insertAdjacentHTML("afterbegin", htmlBebidas);
   divComplementos.insertAdjacentHTML("afterbegin", htmlComplementos);
   divAlcohol.insertAdjacentHTML("afterbegin", htmlAlcohol);
-}//else
+
 });
