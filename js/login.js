@@ -94,7 +94,7 @@ btnRegistro.addEventListener("click", function(event){
         Swal.fire({
             icon: 'success',
             title: 'ORAA...',
-            title: 'Tú usuario a sido guardado'
+            title: 'Tú usuario ha sido guardado'
         });
         let usuario = {
             nombre: txtNombre.value,
