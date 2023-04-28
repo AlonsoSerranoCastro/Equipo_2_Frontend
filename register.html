@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/register.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +30,15 @@
       <div class="row">
         <div class="col-md-8 mx-auto">
           <form class="login-box">
-            <h2 class="h2Texto">Inicia Sesión</h2>
+            <h2 class="h2Texto">Regístrate</h2>
+            <div class="user-box">
+              <input type="text" name="" required="" id="txtNombre" />
+              <label>Nombre</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="" required="" id="txtNumero" />
+              <label>Número de teléfono</label>
+            </div>
             <div class="user-box">
               <input type="text" name="" required="" id="txtEmail" />
               <label>Email</label>
@@ -39,20 +47,18 @@
               <input type="password" name="" required="" id="txtContraA" />
               <label>Contraseña</label>
             </div>
-            <div>
-                <span class="paginaRegistro">
-                    <br>
-                    <a href="./register.html"> ¿No tienes una cuenta? Regístrate </a>
-                </span>
+            <div class="user-box">
+              <input type="password" name="" required="" id="txtContraB" />
+              <label>Confirma contraseña</label>
             </div>
             <div class="btn">
-              <a href="#" id="btnLogin"> Enviar </a>
+              <a href="#" id="btnRegistro"> Enviar </a>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <script src="/js/login.js"></script>
+    <script src="/js/register.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

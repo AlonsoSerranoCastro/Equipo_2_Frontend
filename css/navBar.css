@@ -33,6 +33,13 @@ img {
   background-color: #FCC875;
   border-radius: 10px;
   text-align: center;
+  transform: scale(1.2);
+}
+.bi-person-circle:hover {
+  background-color: #FCC875;
+  border-radius: 50%;
+  text-align: center;
+  transform: scale(1.2);
 }
 
 .collapse{
