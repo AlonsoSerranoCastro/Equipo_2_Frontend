@@ -26,7 +26,12 @@
    .footStyle  a:hover{
        color: gray;
    }
+
+   footer div a img{
+        display:unset;
+   }
    
    .footStyle h1{
        font-size: x-large;
    }
+

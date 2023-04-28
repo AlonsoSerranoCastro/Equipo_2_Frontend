@@ -15,7 +15,7 @@ body {
   box-sizing: border-box;
 }
 
-span {
+.mi-span{
   position: relative;
   bottom: 30px;
   background-color: #272932;
@@ -74,7 +74,7 @@ p.nombres {
   color: #272932;
 
   font-family: 'lato';
-  font-size: 18px;
+  font-size: 14px;
 
 }
 
@@ -253,7 +253,7 @@ p.nombres {
 
 
 
-.mi-front .mi-inner span {
+.mi-front .mi-inner .mi-span {
   color: rgba(255, 255, 255, 0.977);
   font-family: 'Lato';
   font-weight: 300;
