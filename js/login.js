@@ -1,6 +1,6 @@
-let btnRegistro = document.getElementById("btnLogin");
+let btnLogin = document.getElementById("btnLogin");
 let txtEmail = document.getElementById("txtEmail");
-let txtContraA = document.getElementById("txtContraA");
+let txtContra = document.getElementById("txtContra");
 let alerta = document.getElementById("alertValidaciones");
 let txtAlerta = document.getElementById("alertValidacionesTexto");
 let msgError = "";
@@ -10,37 +10,41 @@ txtEmail.addEventListener("blur", function (event) {
     event.preventDefault();
     txtEmail.value.trim();
 
-    txtContraA.addEventListener("blur", function (event) {
+    txtContra.addEventListener("blur", function (event) {
         event.preventDefault();
-        txtContraA.value = txtContraA.value.trim();
-    });
+        txtContra.value = txtContra.value.trim();
+    });//txtContraA event
 
-});
+});//txtEmail event
 //Se definen las constantes con expresiones regulares para poner parámetros de utilización sobre los campos a rellenar del formulario
 const regexEmail = (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/);
 
-btnRegistro.addEventListener("click", function(event){
+btnLogin.addEventListener("click", function(event){
     event.preventDefault();
-    let user = localStorage.getItem("usuario");
-    if (validarEmail(txtEmail.value, user.email) == true && validarContra(txtContraA.value, user.contraA) == true ) {
+    let user = JSON.parse(localStorage.getItem("usuario"));
+    if (validarEmail(txtEmail.value, user.email) == true && validarContra(txtContra.value, user.contraseña) == true ) {
             Swal.fire({
                 icon: 'success',
-                title: '¿CÓMO?',
+                title: 'CHULADA',
                 title: 'Iniciaste Sesión'
-            });
-    } else { let htmlAlert = `<ul class = listaDeErrores> Tienes errores en los siguientes campos: ${msgError}</ul>`;
+            });//if
+            setTimeout(function() {
+                window.location.replace("index.html");
+            }, 3000); // Espera 3 segundos antes de redirigir a la página de index.html
+            
+    }    else { let htmlAlert = `<ul class = listaDeErrores> Tienes errores en los siguientes campos: ${msgError}</ul>`;
          Swal.fire({
         icon: 'error',
         title: 'ORAA...',
         html: htmlAlert,
     });
-    }
+    };//else
     //Funcionalidad para qe se reinicie el contador cada vez que se muestre un error en el envío del formulario de contacto
     cont = 0;
         htmlAlert = "";
         msgError = "";
-});
-
+});//btnRegistro evento
+  
 
 function validarEmail(email, localEmail) {
     if (email == localEmail) {
@@ -52,8 +56,8 @@ function validarEmail(email, localEmail) {
     }
 }
 
-function validarContraA(contraA, localContra) {
-    if (contraA == localContra) {
+function validarContra(contra, localContra) {
+    if (contra == localContra) {
         return true;
 
     } else {

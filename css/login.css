@@ -99,7 +99,7 @@ body {
   .login-box a:hover {
     /*Estilo del hover del botón */
     background: #FCC875;
-    color: #fff;
+    color: #000000;
     border-radius: 10px;
     box-shadow: 0 0 5px #FCC875,
   
