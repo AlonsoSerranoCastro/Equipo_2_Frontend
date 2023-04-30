@@ -144,7 +144,7 @@ let jsonMenu = [
   {
     nombre: "Cerveza XX lager",
     img: "/src/imgmenu/cervezaX.jpg",
-    descripción: "Envase de 355 ml",
+    descripción: "Con aroma suave y fresco con notas de malta, Envase de 355 ml",
     precio: 47,
     categoría: "Bebidas alcohólicas",
   },
@@ -187,15 +187,14 @@ let jsonMenu = [
     categoría: "Postre",
   },
 ];
-//Se sube la información del json a localStorage
-localStorage.setItem('menu', JSON.stringify(jsonMenu));
+
 
 window.addEventListener("load", function (event) {
   let retSessionMenu = JSON.parse(localStorage.getItem("jsonNuevoProducto"));
   if (retSessionMenu == null ) {
     localStorage.setItem('jsonNuevoProducto', JSON.stringify(jsonMenu));
+    retSessionMenu = JSON.parse(localStorage.getItem("jsonNuevoProducto"));
   }
-  else {
     console.log(retSessionMenu);
 
   event.preventDefault();
@@ -213,56 +212,56 @@ window.addEventListener("load", function (event) {
   retSessionMenu.forEach(burguer => {
     switch (burguer.categoría) {
       case "Hamburguesas":
-        hmtlHamburguesas += `<div class="card" style="width: 18rem;">
+        hmtlHamburguesas += `<div class="card">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
                  <p class="card-description">${burguer.descripción}</p>
-                 <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                 <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
                  <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
         break;
       case "Postre":
-        htmlPostres += `<div class="card" style="width: 18rem;">
+        htmlPostres += `<div class="card">
            <img src="${burguer.img}" class="card-img-top" alt="...">
            <div class="card-body">
              <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
              <p class="card-description">${burguer.descripción}</p>
-             <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+             <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
              <a href="#" class="btn btn-primary">Agregar</a>
            </div>
          </div>`;
         break;
       case "Bebidas":
-        htmlBebidas += `<div class="card" style="width: 18rem;">
+        htmlBebidas += `<div class="card">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
                  <p class="card-description">${burguer.descripción}</p>
-                 <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                 <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
                  <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
         break;
       case "Complementos":
-        htmlComplementos += `<div class="card" style="width: 18rem;">
+        htmlComplementos += `<div class="card">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
                  <p class="card-description">${burguer.descripción}</p>
-                 <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                 <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
                  <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
         break;
       case "Bebidas alcohólicas":
-        htmlAlcohol += `<div class="card" style="width: 18rem;">
+        htmlAlcohol += `<div class="card">
                <img src="${burguer.img}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
                  <p class="card-description">${burguer.descripción}</p>
-                 <p class="card-precio"><strong>$ ${burguer.precio}</strong></p>
+                 <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
                  <a href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
@@ -274,5 +273,5 @@ window.addEventListener("load", function (event) {
   divBebidas.insertAdjacentHTML("afterbegin", htmlBebidas);
   divComplementos.insertAdjacentHTML("afterbegin", htmlComplementos);
   divAlcohol.insertAdjacentHTML("afterbegin", htmlAlcohol);
-}//else
+
 });
