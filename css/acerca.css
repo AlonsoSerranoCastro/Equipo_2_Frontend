@@ -1,4 +1,4 @@
-.tituloMenu{
+.tituloAcercaD{
     margin: 0 0 30px;
     padding: 0;
     color: #135b11;
@@ -25,11 +25,13 @@
     line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
-    padding: 5%;
+    padding: 0 3%;
+    position: relative;
+    bottom: 1rem;
+    text-align:left;
 }
 
 .hAcerca{
-
     font-family: "Fredoka";
     font-size: 40px;
     font-weight: 600;
@@ -37,13 +39,34 @@
     letter-spacing: 0em;
     text-align: center;
     color: #FCC875;
-
-
 }
-
-.divHistoria{
+.card-body{
     background-color: #272932;
     border-radius: 20px;
-    width: 20%;
-    margin-left: 20px;
+    margin-bottom: 3rem;
+    height: 80%;
 }
+
+.acercaConten{
+    margin: 5%;
+}
+
+.card-body:hover {
+    transform: scale(1.01, 1.01);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+
