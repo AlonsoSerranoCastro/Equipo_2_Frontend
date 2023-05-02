@@ -22,7 +22,15 @@ const regexEmail = (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/);
 btnLogin.addEventListener("click", function(event){
     event.preventDefault();
     let user = JSON.parse(localStorage.getItem("usuario"));
-    if (validarEmail(txtEmail.value, user.email) == true && validarContra(txtContra.value, user.contraseña) == true ) {
+
+    if (user == null) {
+        Swal.fire({
+            icon: 'error',
+            title: 'ORAA...',
+            text: 'No hay un usuario registrado en el sistema',
+        });
+    }
+    else if (validarEmail(txtEmail.value, user.email) == true && validarContra(txtContra.value, user.contraseña) == true ) {
             Swal.fire({
                 icon: 'success',
                 title: 'CHULADA',
