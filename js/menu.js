@@ -23,7 +23,7 @@ let jsonMenu = [
   },
   {
     nombre: "Burger Mexicana",
-    img: "/src/imgmenu/burger Mexicana.jpg",
+    img: "/src/imgmenu/burgerMexicana.jpg",
     descripción:
       "Exquisita Hamburguesa de res, guacamole, tortillas crujientes, queso gouda y pico de gallo.",
     precio: 173,
@@ -31,7 +31,7 @@ let jsonMenu = [
   },
   {
     nombre: "Burger de pollo",
-    img: "/src/imgmenu/burgerde pollo.jpeg",
+    img: "/src/imgmenu/burgerdepollo.jpeg",
     descripción:
       "Exquisita Hamburguesa de pollo, queso philadelphia, aguacate, germen de alfalfa.",
     precio: 123,
@@ -39,7 +39,7 @@ let jsonMenu = [
   },
   {
     nombre: "Burger blue cheese",
-    img: "/src/imgmenu/ burgerblue cheese.jpeg",
+    img: "/src/imgmenu/burgerbluecheese.jpeg",
     descripción:
       "Exquisita Hamburguesa de res, queso blue cheese, tocino, y cebolla al chipotle.",
     precio: 134,

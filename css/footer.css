@@ -5,29 +5,31 @@
   }
 
 .footStyle{
-    background-color: #D2D2D2;
-    margin: 0 auto;
+    background-color: #272932;
     padding: 30px 0;
     justify-content: space-between;
     display: flex;
+    margin-top: 5rem;
    }
 
    .containerBig{
       max-width: 950px;
       text-align: center;
    }
+
    .col-sm-3 {
-    width: 294px;
+    width: 14.1rem;
    }
 
    .containerBig h1 {
+    color: #fff;
     font-size: 28px;
     margin-bottom: 25px;
    }
 
    .footStyle a{
        text-decoration: none;
-       color: black;
+       color: #fff;
        font-size: 1.2rem;
        font-family:'lato';
        text-align: left;
