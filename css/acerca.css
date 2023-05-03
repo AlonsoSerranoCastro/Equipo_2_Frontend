@@ -1,3 +1,9 @@
+body {
+  background-image: url(/src/imgIndex/promsionesfondoliso_Mesa\ de\ trabajo\ 1.jpg);
+  background-size: cover ;
+  background-attachment: fixed;
+}
+
 .tituloAcercaD{
     margin: 0 0 30px;
     padding: 0;
@@ -28,7 +34,8 @@
     padding: 0 3%;
     position: relative;
     bottom: 1rem;
-    text-align:left;
+    text-align:center;
+    line-height: 1.5;
 }
 
 .hAcerca{
@@ -45,6 +52,7 @@
     border-radius: 20px;
     margin-bottom: 3rem;
     height: 80%;
+    opacity: 0.75;
 }
 
 .acercaConten{
