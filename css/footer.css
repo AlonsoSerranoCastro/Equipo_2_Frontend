@@ -6,14 +6,7 @@
 
 footer{
   background-color: #272932 !important;  
-  color: aliceblue;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  color: #fff;
 }
 
 a{
@@ -21,20 +14,24 @@ a{
   font-size: 17px;
 }
 
-p{
-  font-size: 17px;
+h5{
+  color: #FCC875 !important;
 }
 
+
 a:hover{
-  color:aqua !important;
+  color:#FCC875 !important;
+}
+
+.imagenPrincipalFooter{
+  width: 270px;
+  height: 270px;
 }
 
 
 .iconoRedes{
-  width: 30px;
-  max-width: 100%;
+  width: 35px;
   height: auto;
-  margin-right: 10px;
 }
 
 .historiafooter{
@@ -42,12 +39,13 @@ text-align: justify;
 }
 
 p span{
-  color: yellow;
+  color: #FCC875;
 
 }
 
 .textfoot{
-  color: aliceblue;
+  color: #fff;
+  text-decoration: none;
 }
 
 
