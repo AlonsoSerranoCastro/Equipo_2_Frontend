@@ -1,7 +1,8 @@
 let divItems=document.getElementById("divItems");
-
+let hmtlCarrito="";
 window.addEventListener("load",function(event) {
-    let hmtlCarrito="";
+  divItems.innerHTML = "";
+    hmtlCarrito="";
     let carrito = JSON.parse(localStorage.getItem("jsonCarrito"))
    
     if (carrito==null) {
@@ -13,39 +14,31 @@ window.addEventListener("load",function(event) {
     let syntxCarrito = "";
     let cont = 1;
     var mapCarrito = new Map();
-    
-    let arrCarrito = [];
-
-
+  
     carrito.forEach(car =>{
-      mapCarrito.forEach((map,key) =>{
-        if (car.nombre == key) {
-          //mapCarrito.set(key,hmtlCarrito)
-          cont++;
-          console.log("ola " + cont);
-        }
-        
-        syntxCarrito = `<div class="card">
-        <img src="${car.imagen}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><strong>${car.nombre}</strong></h5>
-          <p class="card-text"><strong>$ ${car.precio}</strong></p>
-        </div>
-        <i  class="fa-solid fa-plus bg-success"></i>
-        <label>${cont}</label>
-        <i class="fa-solid fa-minus bg-danger"></i> 
-      </div>`;
+     if(mapCarrito.has(car.nombre)){
+        cont = carrito.filter((element) => element["nombre"] === car.nombre).length;
+     }
+      syntxCarrito = `<div class="card">
+      <img src="${car.imagen}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><strong>${car.nombre}</strong></h5>
+        <p class="card-text"><strong>$ ${car.precio}</strong></p>
+      </div>
+      <i  class="fa-solid fa-plus bg-success"></i>
+      <label>${cont}</label>
+      <i class="fa-solid fa-minus bg-danger"></i> 
+    </div>`;
 
-      mapCarrito.set(car.nombre, syntxCarrito);
-      cont = 1;        
-      });
-     
-      //mapCarrito.forEach((map,key) =>{
-
-      //});
-      divItems.insertAdjacentHTML("afterbegin",hmtlCarrito);
+    mapCarrito.set(car.nombre, syntxCarrito);
+    cont = 1;   
+    });
+    mapCarrito.forEach((map,key) =>{
+      hmtlCarrito += mapCarrito.get(key);
+      console.log(hmtlCarrito);
     });
 
+    divItems.insertAdjacentHTML("afterbegin",hmtlCarrito);
     /*
     carrito.forEach(car =>{
       contadorCarrito.forEach(contCar => {
