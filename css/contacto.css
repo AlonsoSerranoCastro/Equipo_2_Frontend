@@ -1,6 +1,9 @@
 body {
   /*Estilo del cuerpo */
-  background: #fff;
+    background-image: url(/src/imgfondos/fondocontacto.jpg);
+    background-size: cover ;
+    background-attachment: fixed;
+    position: relative;
 }
 
 

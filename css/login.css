@@ -1,7 +1,11 @@
 body {
     /*Estilo del cuerpo */
-    background: #fff;
+      background-image: url(/src/imgfondos/fondologin.jpg);
+      background-size: cover ;
+      background-attachment: fixed;
+      position: relative;
   }
+
 
   .tituloLogin {
     /*Estilo del titulo "Contacto"*/
