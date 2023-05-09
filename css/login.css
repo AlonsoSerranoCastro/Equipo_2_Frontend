@@ -98,6 +98,7 @@ body {
     font-family: 'Handlee';
     letter-spacing: 0em;
     text-align: center;
+    border: 1px solid #FCC875;
   }
   
   .login-box a:hover {
