@@ -14,28 +14,47 @@
   -webkit-text-stroke: 1.5px #272932;
 }
 
-.containercardss {
+.containerCards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 18rem;
+  grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
+  gap: 10rem;
   background-color: #e7ecef;
-  padding: 13rem;
-  border-radius: 2rem;
+  padding: 14rem;
+  border-radius: 25px;
   margin: 8rem;
-  margin-top: auto;
+  margin-top: 2rem;
 }
 
 .card {
   background-color: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 25px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex;
   flex-direction: column;
   width: -webkit-fill-available;
+  margin-top: -8rem;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25);
 }
-
+.card:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+.card-header {
+  height: 200px;
+  width: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+#colorAmarillo {
+  background-color: #fcc875;
+}
+#colorVerde {
+  background-color: #272932;
+  color: #fcc875;
+}
 .bodycard {
   max-width: 100%;
   height: auto;
@@ -50,10 +69,10 @@ iframe {
   width: -webkit-fill-available;
   height: 19rem;
   transform: translateX(0rem);
-  border-radius: 2rem;
+  border-radius: 25px;
 }
 @media screen and (max-width: 425px) {
-  .containercardss {
+  .containerCards {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2.5rem;
     padding: 1.5rem;
@@ -70,7 +89,7 @@ iframe {
   }
 }
 @media screen and (max-width: 768px) {
-  .containercardss {
+  .containerCards {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin: 0.5rem;
@@ -78,6 +97,7 @@ iframe {
 
   .card {
     width: -webkit-fill-available;
+    margin-top: auto;
   }
 
   iframe {
@@ -86,7 +106,7 @@ iframe {
   }
 }
 @media screen and (max-width: 124px) {
-  .containercardss {
+  .containerCards {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2.5rem;
     padding: 1.5rem;
