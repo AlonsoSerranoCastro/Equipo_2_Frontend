@@ -31,7 +31,7 @@ nombreFormulario.addEventListener("blur", function (event) {
 });
 
 //Se definen las constantes con expresiones regulares para poner parámetros de utilización sobre los campos a rellenar del formulario
-const regexNombreFormulario = (/^[A-Za-záéíóúÁÉÍÓÚÑñ\s]{3,}$/);
+const regexNombreFormulario = (/^(?=[A-Za-záéíóúÁÉÍÓÚÑñ])[A-Za-záéíóúÁÉÍÓÚÑñ0-9\s]{3,}$/);
 const regexPrecioFormulario = (/^\d{1,3}(\.\d{1,2})?$/);
 const regexDescripcionFormulario = (/^[\s\S]{5,150}$/);
 
