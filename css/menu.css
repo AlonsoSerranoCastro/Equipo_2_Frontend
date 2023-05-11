@@ -54,13 +54,13 @@ h5 {
   width: 18rem;
   height: 35rem;
   display: -ms-inline-grid;
-  margin: 0.5rem;
+  margin: 1rem;
   box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   vertical-align: bottom;
   align-items: end;
 }
-.card > img{
+.card > img {
   width: 15rem;
 }
 .card-body {
@@ -102,6 +102,8 @@ h5 {
   text-align: left;
   color: #ffffff;
   flex-grow: 1;
+  font-family: "Lato";
+  font-weight: 300;
 }
 .card-text {
   display: flex;
@@ -109,9 +111,9 @@ h5 {
   font-size: x-large;
   color: #ffffff;
   margin-top: auto;
-  padding: 1rem;
+  padding: 2rem;
   position: absolute;
-  top: 25rem;
+  top: 25.2rem;
 }
 .btn-primary {
   background-color: #135b11;
@@ -145,6 +147,9 @@ h5 {
     width: 100%;
   }
 }
+#burguers {
+  margin: -1rem;
+}
 @media only screen and (max-width: 1440px) {
   .row {
     flex-shrink: 0;
@@ -172,7 +177,8 @@ h5 {
 }
 @media only screen and (max-width: 768px) {
   .card {
-    width: 45%;
+    width: 17rem;
+    margin: 1 rem;
   }
   card-body {
     flex: 1 1 auto;
@@ -208,8 +214,7 @@ h5 {
     padding: 5px;
     position: absolute;
     margin-top: 2rem;
-    margin-block-end: 0rem;
-    width: 16rem;
+    width: 15rem;
   }
 }
 
@@ -237,7 +242,7 @@ h5 {
     width: 18rem;
     height: 34rem;
     display: -ms-inline-grid;
-    margin: -1.5rem;
+    margin: -2.5rem;
     box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25);
     border-radius: 5%;
     vertical-align: bottom;
@@ -282,5 +287,8 @@ h5 {
     padding-right: calc(var(--bs-gutter-x) * 0.5);
 
     margin-top: var(--bs-gutter-y);
+  }
+  #burguers {
+    margin: auto;
   }
 }

@@ -1,169 +1,170 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'fredoka';
+body {
+  font-family: "fredoka";
 }
 .tituloMenu {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #135b11;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: "Fredoka";
-    font-style: bold;
-    font-weight: 900;
-    font-size: 64px;
-    line-height: 77px;
-    text-align: center;
-    --bs-card-spacer-x: 1rem;
-    --bs-card-title-spacer-y: 1rem;
-    -webkit-text-stroke: 1.5px #272932;
-  }
-
-.post-list{
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 15px;
+  margin: 0 0 30px;
+  padding: 0;
+  color: #135b11;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Fredoka";
+  font-style: bold;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 1rem;
+  -webkit-text-stroke: 1.5px #272932;
 }
 
-.content{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
-    max-width:1000px ;
-    margin: auto;
+.post-list {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
 }
 
-.post-img-1{
-    background: url(../src/imgblog/imgBlogDiaNiño.jpg);
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    transition:  .2s;
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.post-img-2{
-    background: url(../src/imgblog/imgBlogAniversario.jpg);
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    transition:  .2s;
-}
-.post-img-3{
-    background: url(../src/imgblog/GuadalajaraBlog.webp);
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    transition:  .2s;
-}
-.post-img-4{
-    background: url(../src/imgmenu/dedosDeQueso.jpg);
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    transition:  .2s;
-}
-.post-img-5{
-    background: url(../src/imgblog/img-5.jpeg);
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    transition:  .2s;
-}
-.post-img-6{
-    background: url(../src/imgblog/img-6.jpg);
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    transition:  .2s;
+.post-img-1 {
+  background: url(../src/imgblog/imgBlogDiaNiño.jpg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
 }
 
-.post{
-    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .1);
-    overflow: hidden;
-    transition: .2s;
+.post-img-2 {
+  background: url(../src/imgblog/imgBlogAniversario.jpg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+}
+.post-img-3 {
+  background: url(../src/imgblog/GuadalajaraBlog.webp);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+}
+.post-img-4 {
+  background: url(../src/imgmenu/dedosDeQueso.jpg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+}
+.post-img-5 {
+  background: url(../src/imgblog/img-5.jpeg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+}
+.post-img-6 {
+  background: url(../src/imgblog/img-6.jpg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
 }
 
-.post:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 1px 14px 2px rgba(0, 0, 0, .15);
+.post {
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 25px;
 }
 
-.post-header{
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    cursor: pointer;
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 14px 2px rgba(0, 0, 0, 0.186);
+}
+
+.post-header {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .post:hover .post-img-1,
 .post:hover .post-img-2,
 .post:hover .post-img-3,
-.post:hover .post-img-4,    
+.post:hover .post-img-4,
 .post:hover .post-img-5,
-.post:hover .post-img-6{
-    transform: scale(1,1);
+.post:hover .post-img-6 {
+  transform: scale(1, 1);
 }
 
-.post-body{
-    padding: 15px;
-    text-align:center;
+.post-body {
+  padding: 15px;
+  text-align: center;
 }
 
-.post-body span{
-    display: inline-block;
-    color: black;
-    margin-bottom: 10px;
+.post-body span {
+  display: inline-block;
+  color: black;
+  margin-bottom: 10px;
 }
 
-.post-body h2{
-    margin-bottom: 20px;
-    color: #135b11;
+.post-body h2 {
+  margin-bottom: 20px;
+  color: #135b11;
 }
 
-.post-body p{
-    line-height: 1.5;
-    margin-bottom: 20px;
+.post-body p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: "Lato";
 }
 
-.post-body .post-link{
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    background:#135b11;
-    border-radius: 25px;
-    color: #ffffff;
-    width: 50%;
-    margin: auto;
-    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .1);
-    transition: .2s;
+.post-body .post-link {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: #135b11;
+  border-radius: 25px;
+  color: #ffffff;
+  width: 50%;
+  margin: auto;
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
 }
 
-.post-body .post-link:hover{
-    background:#0e410c;
-    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .2) ;
-    transform: translateY(-2px);
+.post-body .post-link:hover {
+  background: #0e410c;
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
-
-@media(max-width:840px){
-    .content {
-        grid-template-columns: repeat(2,1fr);
-    }
+@media (max-width: 840px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media(max-width:600px){
-    .content {
-        grid-template-columns: repeat(1,1fr);
-    }
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
