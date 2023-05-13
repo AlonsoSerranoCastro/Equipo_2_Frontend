@@ -1,3 +1,11 @@
+body {
+  /*Estilo del cuerpo */
+  background-image: url(/src/imgfondos/fondomenu.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
 .menuContenido {
   justify-content: center;
 }
@@ -14,7 +22,6 @@
   text-align: center;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 1rem;
-  -webkit-text-stroke: 1.5px #272932;
 }
 
 h5 {
