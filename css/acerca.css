@@ -25,8 +25,8 @@ body {
 .imgAcercaCocinero {
   width: -webkit-fill-available;
   height: -webkit-fill-available;
-  /* margin-left: 8%; */
-  /* border-radius: 50%; */
+  margin: 8%;
+  margin-top: -8em;
 }
 
 .pAcerca {
@@ -82,5 +82,11 @@ body {
   to {
     margin-left: 0%;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .imgAcercaCocinero {
+    margin-top: -1em;
   }
 }

@@ -25,7 +25,6 @@ body {
   text-align: center;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 1rem;
-  -webkit-text-stroke: 1.5px #272932;
 }
 
 .post-list {
@@ -125,17 +124,19 @@ body {
 .post-body {
   padding: 15px;
   text-align: center;
+  background-color: #272932;
+  color: #ffffff;
 }
 
 .post-body span {
   display: inline-block;
-  color: black;
+  color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }
 
 .post-body h2 {
   margin-bottom: 20px;
-  color: #135b11;
+  color: #ffffff;
 }
 
 .post-body p {
