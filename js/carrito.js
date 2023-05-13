@@ -1,14 +1,18 @@
 let divItems=document.getElementById("divItems");
 let hmtlCarrito="";
 var mapCarrito = new Map();
+let bool = false;
 
 window.addEventListener("load",function(event) {
+  event.preventDefault();
   divItems.innerHTML = "";
     hmtlCarrito="";
-   
-
-    divItems.insertAdjacentHTML("afterbegin",mostrar());
-
+    if(bool == false){
+      mostrar();
+      bool = true;
+      console.log("SI ENTRA");
+      divItems.insertAdjacentHTML("afterbegin",almacenamiento());
+    }
 })
  function mostrar() {
   let carrito = JSON.parse(localStorage.getItem("jsonCarrito"))
@@ -28,11 +32,10 @@ window.addEventListener("load",function(event) {
       cont = carrito.filter((element) => element["nombre"] === car.nombre).length;
    }
    let total = cont*car.precio;
-   let totalProducto = 0;
 
    syntxCarrito = `<tr>
                     <td><img src="${car.imagen}"> <label> ${car.nombre}</label></td> 
-                    <td id="cantidad"><i onclick="contador(${cont} +1 , ${car.nombre}, ${car.imagen}, ${car.precio})" class="fa-solid fa-plus bg-success"></i><label>${cont}</label><i onclick="contador(${cont} -1 , ${car.nombre}, ${car.imagen}, ${car.precio})" class="fa-solid fa-minus bg-danger"></i></td>
+                    <td id="cantidad"><i onclick="contador(${cont +1}, '${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-plus bg-success"></i><label>${cont}</label><i onclick="contador(${cont} -1 , '${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-minus bg-danger"></i></td>
                     <td><label><strong>$ ${car.precio}</strong></label></td>
                     <td><label><strong>$ ${total}</strong></label></td>
                     </tr>
@@ -41,10 +44,6 @@ window.addEventListener("load",function(event) {
   total = 0;
   cont = 1;   
   });
- 
- 
-
-  return htmlTable;
  }
 
  function contador(contadorActual, nombreMap, imagenMap, precioMap) {
@@ -52,21 +51,24 @@ window.addEventListener("load",function(event) {
   
   syntxCarrito = `<tr>
   <td><img src="${imagenMap}"> <label> ${nombreMap}</label></td> 
-  <td id="cantidad"><i onclick="contador(${contadorActual} +1 , ${nombreMap}, ${imagenMap}, ${precioMap})" class="fa-solid fa-plus bg-success"></i><label>${contadorActual}</label><i onclick="contador(${cont} -1 , ${nombreMap}, ${imagenMap}, ${precioMap})" class="fa-solid fa-minus bg-danger"></i></td>
+  <td id="cantidad"><i onclick="contador(${contadorActual + 1 } , '${nombreMap}', '${imagenMap}', ${precioMap})" class="fa-solid fa-plus bg-success"></i><label>${contadorActual}</label><i onclick="contador(${contadorActual-1} , '${nombreMap}', '${imagenMap}', ${precioMap})" class="fa-solid fa-minus bg-danger"></i></td>
   <td><label><strong>$ ${precioMap}</strong></label></td>
   <td><label><strong>$ ${total}</strong></label></td>
   </tr>
-  `
-
+  `;
  mapCarrito.set(nombreMap, syntxCarrito);
  total = 0;
+ divItems.insertAdjacentHTML("afterbegin",almacenamiento());
  }
 
- function almacenamiento(params) {
+ function almacenamiento() {
+  divItems.innerHTML = null;
+  hmtlCarrito = "";
   mapCarrito.forEach((map,key) =>{
+
     hmtlCarrito += mapCarrito.get(key);
-    console.log(hmtlCarrito);
   });
+
   let htmlTable = `<table id="htmlTable" class="table">
   <tr>
     <th scope="col">Producto</th>
@@ -76,4 +78,6 @@ window.addEventListener("load",function(event) {
   </tr>
   ${hmtlCarrito}
   </table>`;
+
+  return htmlTable;
  }
