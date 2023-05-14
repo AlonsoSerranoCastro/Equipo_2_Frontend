@@ -11,7 +11,6 @@ window.addEventListener("load",function(event) {
       mostrar();
       bool = true;
       console.log("SI ENTRA");
-      divItems.insertAdjacentHTML("afterbegin",almacenamiento());
     }
 })
  function mostrar() {
@@ -43,12 +42,25 @@ window.addEventListener("load",function(event) {
   mapCarrito.set(car.nombre, syntxCarrito);
   total = 0;
   cont = 1;   
+  divItems.innerHTML = "";
+  divItems.insertAdjacentHTML("afterbegin",almacenamiento());
   });
  }
 
  function contador(contadorActual, nombreMap, imagenMap, precioMap) {
+  console.log(contadorActual);
+  if (contadorActual==0){
+    
+    let localCarrito = JSON.parse(localStorage.getItem("jsonCarrito"));
+    let newlocalCarrito = localCarrito.filter(filt => filt["nombre"] !== nombreMap);
+    mapCarrito.delete(nombreMap);
+    localStorage.setItem("jsonCarrito",JSON.stringify(newlocalCarrito));
+    mostrar();
+
+    };
+
   let total = contadorActual*precioMap;
-  
+
   syntxCarrito = `<tr>
   <td><img src="${imagenMap}"> <label> ${nombreMap}</label></td> 
   <td id="cantidad"><i onclick="contador(${contadorActual + 1 } , '${nombreMap}', '${imagenMap}', ${precioMap})" class="fa-solid fa-plus bg-success"></i><label>${contadorActual}</label><i onclick="contador(${contadorActual-1} , '${nombreMap}', '${imagenMap}', ${precioMap})" class="fa-solid fa-minus bg-danger"></i></td>
@@ -65,7 +77,6 @@ window.addEventListener("load",function(event) {
   divItems.innerHTML = null;
   hmtlCarrito = "";
   mapCarrito.forEach((map,key) =>{
-
     hmtlCarrito += mapCarrito.get(key);
   });
 
@@ -77,6 +88,9 @@ window.addEventListener("load",function(event) {
     <th scope="col">Total</th>
   </tr>
   ${hmtlCarrito}
+  <tr>
+  <td><label> <strong> Total del carrito $ ${totalSuma}</strong></label></td>
+  </tr>
   </table>`;
 
   return htmlTable;
