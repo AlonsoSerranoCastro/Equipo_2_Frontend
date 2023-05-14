@@ -1,18 +1,19 @@
-body{  
-  font-family: 'Fredoka';
+body {
+  font-family: "Fredoka";
   overflow-x: hidden;
 }
 
-.navbar-toggler{
-  border:2px solid #FFFFFF;
+.navbar-toggler {
+  border: 2px solid #ffffff;
 }
-.navbar-toggler-icon{
-  background-color:#FCC875;
+.navbar-toggler-icon {
+  background-color: #fcc875;
 }
 
-.nav-link {  /* Esta parte son las letras del Navbar*/
-  color:#FFFFFF !important;
- margin-top: 2.5rem;
+.nav-link {
+  /* Esta parte son las letras del Navbar*/
+  color: #ffffff !important;
+  margin-top: 2.5rem;
   margin-left: 3rem;
   font-size: 20px;
 }
@@ -23,81 +24,80 @@ img {
   height: 10rem;
 }
 
-.navbar{
+.navbar {
   background-color: #272932;
   position: relative;
- 
 }
 
 .bi-person-circle:hover {
-  background-color: #FCC875;
+  background-color: #fcc875;
   border-radius: 50%;
   text-align: center;
   transform: scale(1.2);
 }
 
-.collapse{
-color: #FCC875;   
+.collapse {
+  color: #fcc875;
 }
 
-.container-fluid{
- display: flex;
- justify-content: center;
+.container-fluid {
+  display: flex;
+  justify-content: center;
 }
-#carritoBurger{
- position: relative;
- right: 1rem;
-}
-
-#logoLogin{
+#carritoBurger {
   position: relative;
- top: 2.5rem;
+  right: 1rem;
 }
 
-@media(max-width:768px){
-  .container-fluid{
-      padding: 0 10%;
+#logoLogin {
+  position: relative;
+  top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 10%;
   }
 }
 
-.navbar-toggler{
+.navbar-toggler {
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
 
-img{
+img {
   display: flex;
   align-items: center;
   width: 10rem;
   height: 10rem;
 }
 
-#logoLogin{
-   position: relative;
+#logoLogin {
+  position: relative;
   top: 3rem;
 }
 
-.modal-dialog{
+.modal-dialog {
   margin: 0;
   width: 430px;
 }
 
-@media(max-width: 320px){
-  .container-fluid{
-      width: 100%;
+@media (max-width: 320px) {
+  .container-fluid {
+    width: 100%;
   }
-  .navbar{
+  .navbar {
     background-color: #272932;
     position: relative;
   }
 }
 
-@media(max-width:767px){
-  .section-1 p{
-      font-size: 50px;
-      text-align: start;
-      width: 70%;
-      margin: auto;
+@media (max-width: 767px) {
+  .section-1 p {
+    font-size: 50px;
+    text-align: start;
+    width: 70%;
+    margin: auto;
   }
-} 
+}

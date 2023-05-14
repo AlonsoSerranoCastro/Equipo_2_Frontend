@@ -122,3 +122,10 @@ iframe {
     height: 16rem;
   }
 }
+.imgScursales {
+  width: -webkit-fill-available;
+  border-radius: 25px;
+  margin: inherit;
+  display: grid;
+  height: unset;
+}

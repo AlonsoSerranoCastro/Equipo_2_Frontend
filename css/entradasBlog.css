@@ -1,150 +1,100 @@
-
 /* parte responsiva */
 body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    background: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  background-image: url(/src/imgfondos/fondococina.png);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 header {
-    background-color: #f8f8f8;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #f8f8f8;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
-   
-    margin: 0 0 30px;
-    padding: 0;
-    color: #135B11;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Fredoka';
-    font-style: bold;
-    font-weight: 900;
-    font-size: 64px;
-    line-height: 77px;
-    text-align: center;
-    -webkit-text-stroke: 1.5px #272932;
+  margin: 0 0 30px;
+  padding: 0;
+  color: #135b11;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Fredoka";
+  font-style: bold;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
 }
-
 
 main {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-article {
-    flex: 2;
-    margin-right: 20px;
-}
-
-aside {
-    flex: 1;
-    margin-left: 20px;
-    margin-bottom: 20px;
-
-    background-color:    #272932; 
-    color:  #f8f8f8;
-    font-family: 'Handlee';
-   letter-spacing: 0em;
-   border-bottom: 16px solid  #FCC875;
-   border-radius: 20px;
-   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-
-}
-
-.imsAside{
-    width: 100%;
-  
-   background-size: cover;
-   background-position: center;
-}
-
-h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    margin: 0 0 30px;
-    padding: 0;
-    color: #272932;
-    font-family: 'Handlee';
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 43px;
-    letter-spacing: 0em;
-    text-align: center;
-  
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  
+.blog-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .imgBlog {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    background-color:   #FCC875; 
-   border-radius: 20px;
-   justify-content: center;
-   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-   width: 100%;
-  
-   background-size: cover;
-   background-position: center;
-}
-#textAside{
-    text-align:center;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  width: 50%;
+  height: 60%;
+  border-radius: 25px;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.257);
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 20px;
-
-    width: 100%;
-    padding: 10px 0;
-    font-size: 20px;
-    font-family: 'Handlee';
-    letter-spacing: 0em;
-    text-align: justify;
+.blog-text {
+  max-width: 700px;
+  background-color: #272a33;
+  border-radius: 25px;
+  margin: auto;
+  padding: 1em;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.187);
 }
-
-
 
 @media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .blog-content {
+    display: block;
+  }
 
-    h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-
-    main {
-        flex-direction: column;
-    }
-
-    article, aside {
-        margin: 0;
-        width: 100%;
-    }
+  .imgBlog {
+    /* float: none;
+    margin: auto; */
+    display: block;
+    width: -webkit-fill-available;
+    margin: 2rem;
+  }
 }
-
-@media screen and (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-  
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin: 0 0 30px;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Handlee";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+p {
+  font-size: 20px;
+  font-family: "Lato";
+  color: #ffffff;
 }
