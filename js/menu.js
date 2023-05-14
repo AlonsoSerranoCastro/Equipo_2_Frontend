@@ -189,7 +189,6 @@ let jsonMenu = [
 ];
 
 function addItem(jsonBurguer){
-  console.log(jsonBurguer.precio);
   let itemStorage = JSON.parse(localStorage.getItem("jsonCarrito"));
   if (itemStorage==null) {
     let jasonItems = [jsonBurguer];
