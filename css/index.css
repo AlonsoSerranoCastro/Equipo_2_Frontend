@@ -70,7 +70,7 @@
     font-size: 1.2em;
     line-height: 1.5;
     width: 100%;
-    
+    font-family: "Lato";  
   }
 
   .desvideo span{
@@ -79,8 +79,84 @@
     font-size: 1.2em;
     line-height: 1.5;
     width: 100%;
+    font-family: "Fredoka";
     
   }
+
+  /* Cards pilares restaurante */
+  
+  .welcome{
+    padding: 4rem 2%;
+  }
+
+  .heading{
+    text-align: center;
+    color:#135B11;
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+  }
+
+  .sub-heading{
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: .5rem 2rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    background: #272932;
+    display: inline-block;
+  }
+
+  .welcome .box-container{
+    display: flex;
+    gap: 1.5 rem;
+  }
+
+  .welcome .box-container .box{
+    width: 33%;
+    background: #272932;
+    text-align: center;
+    margin: 1.5%;
+  }
+
+  .welcome .box-container .box .image{
+    height: 17rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+.welcome .box-container .box .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.welcome .box-container .box .image:hover img{
+  transform: scale(1.1);
+}
+
+.welcome .box-container .box .content{
+  padding: 2rem;
+  padding-top: 2rem;
+}
+.welcome .box-container .box .content h3{
+  color: #FCC875;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.welcome .box-container .box .content p{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: .5rem 0;
+  line-height: 1.5;
+  text-align: justify;
+  font-family: "Lato";
+}
 
   @media screen and (max-width: 768px) {
     /* Estilos para pantallas más pequeñas */
