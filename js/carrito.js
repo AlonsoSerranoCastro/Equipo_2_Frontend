@@ -56,10 +56,10 @@ carrito.forEach((obj) => {
      console.log("Total "+ total)
      console.log("sumaTotal "+ sumaTotal);
      syntxCarrito = `<tr>
-                      <td><img src="${car.imagen}"> <label> ${car.nombre}</label></td> 
-                      <td id="cantidad"><i onclick="agregar('${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-plus bg-success"></i><label>${car.cont}</label><i onclick="eliminar('${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-minus bg-danger"></i></td>
-                      <td><label><strong>$ ${car.precio}</strong></label></td>
-                      <td><label><strong>$ ${total}</strong></label></td>
+                      <td><img src="${car.imagen}"> <label id="nombreProducto"> ${car.nombre}</label></td> 
+                      <td id="cantidad"><i onclick="agregar('${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-plus "></i><label>${car.cont}</label><i onclick="eliminar('${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-minus"></i></td>
+                      <td><label id="numPrecio">$ ${car.precio}</label></td>
+                      <td><label id="numTotal">$ ${total}</label></td>
                       </tr>
                       `;
     mapCarrito.set(car.nombre, syntxCarrito);
@@ -105,14 +105,14 @@ function eliminar( nombreMap, imagenMap, precioMap){
 
   let htmlTable = `<table id="htmlTable" class="table">
   <tr>
-    <th scope="col">Producto</th>
+    <th scope="col" id="tituloProducto">Producto</th>
     <th scope="col">Cantidad</th>
     <th scope="col">Precio</th>
     <th scope="col">Total</th>
   </tr>
   ${hmtlCarrito}
   <tr>
-  <td><label> <strong> Total del carrito $ ${sumaTotal}</strong></label></td>
+  <td><label>Total del carrito $ ${sumaTotal}</label></td>
   </tr>
   </table>`;
 

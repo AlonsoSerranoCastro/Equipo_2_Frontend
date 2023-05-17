@@ -96,15 +96,6 @@ body {
     text-align: center;
   }
   
-  .login-box a:hover {
-    /*Estilo del hover del botón */
-    background: #FCC875;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #FCC875,
-  
-  }
-  
   /*Palabra que contiene el botón*/
   .login-box a span {
     position: absolute;
@@ -178,3 +169,158 @@ body {
   #cantidad>label{
     margin-right: 10px;
   }
+
+  .fa-solid, .fas {
+    margin-top: 5rem;
+    padding: .3rem;
+    background-color: #FCC875!important;
+    color: #272932;
+    border-radius: 30%;
+  } 
+
+  .fa-solid:hover{
+    transform: scale(1.2, 1.2);
+  }
+
+  #numPrecio{
+    font-family: "Lato";
+    font-weight: 300;
+    margin-top: 5rem;
+  }
+
+  #numTotal{
+    font-family: "Lato";
+    font-weight: 300;
+    margin-top: 5rem;
+  }
+
+  label{
+    font-family: "Lato";
+    font-weight: 300;  font-family: "Lato";
+    font-weight: 300;
+    color: #fff;
+  }
+
+  img {
+    display: flex;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#nombreProducto{
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+th{
+  color: #fff;
+}
+
+#htmlTable {
+  color: #272932;
+  background-color: #272932;
+  font-size: 28px;
+}
+
+#tituloProducto{
+  position: relative;
+  left: 4.5rem;
+}
+
+#btnClear{
+  border: 1px solid #FCC875;
+}
+#btnClear:hover {
+  transform: scale(1.2, 1.2);
+}
+
+#btnBuy{
+  border: 1px solid #FCC875;
+}
+#btnBuy:hover {
+  transform: scale(1.2, 1.2);
+}
+
+#divItems{
+  display: flex;
+  width: ;
+}
+
+
+
+
+.container {
+  width: 100%;
+  overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
+}
+
+table {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) { /* Ajusta los estilos para pantallas más pequeñas */
+  table {
+    display: block; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
+  }
+
+  th, td {
+    display: block; /* Cambia el comportamiento de las celdas a bloque para que se apilen verticalmente */
+  }
+}
+
+@media screen and (max-width: 768px) { /* Ajusta los estilos para pantallas más pequeñas */
+  table {
+    display: block; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
+  }
+
+  th, td {
+    display: block; /* Cambia el comportamiento de las celdas a bloque para que se apilen verticalmente */
+  }
+}
+
+@media screen and (max-width: 425px) { /* Ajusta los estilos para pantallas más pequeñas */
+  table {
+    display: block; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
+  }
+
+  th, td {
+    display: block; /* Cambia el comportamiento de las celdas a bloque para que se apilen verticalmente */
+  }
+}
+
+@media screen and (max-width: 320px) { /* Ajusta los estilos para pantallas más pequeñas */
+  table {
+    display: block; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
+  }
+
+  th, td {
+    display: block; /* Cambia el comportamiento de las celdas a bloque para que se apilen verticalmente */
+  }
+}
+
+
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
