@@ -15,7 +15,7 @@ window.addEventListener("load",function(event) {
   let carrito = JSON.parse(localStorage.getItem("jsonCarrito"))
   if (Object.keys(carrito).length === 0) {
     divItems.innerHTML = "";
-    hmtlCarrito = "Aún no has agregado nada a tu carrito";
+    hmtlCarrito= "Aún no has agregado nada a tu carrito</span>";
     divItems.insertAdjacentHTML("afterbegin",hmtlCarrito)
   }else{
     let syntxCarrito = "";
